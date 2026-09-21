@@ -1,7 +1,7 @@
 # Plan de auditoría de `analisis_tajweed_warsh`
 
 - **Identificador:** LEGACY-ANALYSIS-001
-- **Estado global:** bloqueado para implementación; Etapa 0 completada
+- **Estado global:** auditoría heredada completada; bloqueado para implementación normativa
 - **Importancia:** crítica
 
 ## Regla principal
@@ -78,7 +78,7 @@ Ningún estado anterior a `approved` permite implementar la lógica como normati
 - `DECISION_LOGIC_FATH_IMALAH.md` — `rejected`; conserva numerosas categorías de la Parte 10, pero evalúa excepciones e iltiqāʾ al-sākinayn después de retornos definitivos y depende de análisis contextuales no definidos.
 - `DECISION_LOGIC_MUDUD.md` — `rejected`; inventaría muchas categorías de la Parte 11, pero su algoritmo borra excepciones y awjuh, deja layn sin resolución y aplica prioridad a palabras en vez de spans concretos.
 - `DECISION_LOGIC_HAMZ.md` — `rejected`; conserva un catálogo amplio de las Partes 12-A/12-B, pero contiene ramas inalcanzables, pierde awjuh correlacionados y depende de una sección de fuente con correcciones editoriales no resueltas.
-- `PALETA_COLORES_WARSH.md` — `structural_review`; bloqueada como especificación visual.
+- `PALETA_COLORES_WARSH.md` — `rejected`; carece de fuente verificable, usa color como único canal, falla contrastes y propone tachar texto coránico y resolver solapamientos mediante prioridad visual.
 
 ## Hallazgos preliminares bloqueantes
 
