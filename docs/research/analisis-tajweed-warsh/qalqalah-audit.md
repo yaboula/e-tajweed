@@ -2,15 +2,15 @@
 
 - **Artefacto:** LEGACY-ANALYSIS-001 / `DECISION_LOGIC_QALQALAH.md`
 - **SHA-256:** `76410c10d1a3c21f249a49eeb4e1b00686700c69619eaa0b7ddb33c950b05537`
-- **Estado:** `rejected`
-- **Decisión:** rechazado como guía directa de implementación; el núcleo respaldado por REL-001 podrá reescribirse como especificación candidata.
+- **Estado:** `resolved`; correcciones aplicadas al documento migrado
+- **Decisión:** conservar el documento, corregir sus errores y validarlo manualmente antes de usarlo para el desarrollo.
 - **Fuente local contrastada:** REL-001 / `Parte 6 Cualidades de las Letras (Sifat al-Huruf) (Páginas 56-64)..md`.
 
 ## Veredicto
 
-El documento reproduce de forma razonable la descripción básica de qalqalah del libro de trabajo, pero añade un algoritmo Unicode y una detección de waqf que no son seguros. El futuro detector no puede implementarse copiando sus condiciones.
+El documento reproducía de forma razonable la descripción básica de qalqalah del libro de trabajo, pero añadía un algoritmo Unicode y una detección de waqf que no eran seguros. Esos puntos se corrigieron en [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md).
 
-La parte religiosa continúa pendiente de validación por especialista. La parte técnica ya contiene defectos suficientes para bloquear el artefacto actual.
+La validación operativa se realizará durante el desarrollo mediante comparación manual del propietario con el muṣḥaf coloreado y certificado adoptado. La revisión del especialista queda reservada como control final de la aplicación.
 
 ## Elementos respaldados provisionalmente por REL-001
 
@@ -36,7 +36,7 @@ El documento heredado reproduce esos grados en sus líneas 164–172.
 
 REL-001, línea 173, afirma que no hay qalqalah salvo cuando la letra está sākinah. El documento heredado conserva esa condición. Lo que no está validado es su método informático para determinar el sukūn.
 
-## Hallazgos bloqueantes
+## Hallazgos corregidos
 
 ### QAL-001 — Referencias de página imprecisas
 
@@ -86,7 +86,7 @@ El árbol de las líneas 62–79 sólo resuelve:
 
 No define qué ocurre con una letra de qalqalah que ya es sākinah al final de una palabra cuando la lectura continúa. Independientemente de cuál sea la resolución religiosa correcta, un árbol que no tiene rama para una entrada posible no es completo y debe devolver `unknown`.
 
-Este caso requiere fuente precisa y revisión del especialista.
+Este caso requiere fuente precisa y validación manual del propietario contra el muṣḥaf de referencia.
 
 ### QAL-007 — “Sin excepciones” no está demostrado
 
@@ -122,9 +122,9 @@ Las líneas 23–29 importan frecuencias globales de letras. Contar qāf, ṭā�
 
 REL-001, línea 172, describe el grado menor mediante una letra en medio de palabra pero conserva la expresión `الوقف على القاف` en el ejemplo `وخلقناكم`. El documento heredado elimina silenciosamente esa tensión y presenta el ejemplo como interno.
 
-Puede tratarse de un error de transcripción, de redacción del original o de una interpretación que requiere contexto. Debe comprobarse la página física 62 y consultarse al especialista; no se corregirá de memoria.
+Puede tratarse de un error de transcripción, de redacción del original o de una interpretación que requiere contexto. Debe comprobarse la página física 62 y el muṣḥaf certificado; no se corregirá de memoria.
 
-## Modelo mínimo que deberá reemplazarlo
+## Modelo mínimo aplicado en la corrección
 
 La futura especificación candidata deberá separar:
 
@@ -142,7 +142,7 @@ identidad de la letra
 
 La salida no contendrá colores. Si el modo de recitación o el sukūn no pueden determinarse, el resultado será `unknown` o `requires_review`.
 
-## Casos que la nueva especificación deberá incluir
+## Casos que el documento corregido incluye para validación
 
 - Cada una de las cinco letras de `قطب جد` en estado sākinah demostrado.
 - Las mismas letras con vocal: resultado negativo.
@@ -157,12 +157,13 @@ La salida no contendrá colores. Si el modo de recitación o el sukūn no pueden
 
 ## Decisión de migración
 
-- Conservar el archivo original como legado.
-- No migrar su pseudocódigo al motor.
-- No migrar sus colores a la capa de conocimiento.
-- Recuperar únicamente los enunciados respaldados por REL-001 y volver a redactarlos.
-- Mantener todos los resultados como candidatos hasta revisión del qāriʾ o especialista.
+- Conservar una copia privada intacta como custodia histórica.
+- Migrar el archivo con su nombre original.
+- Corregir el pseudocódigo inseguro en el propio documento.
+- Separar los colores de la decisión religiosa.
+- Validar manualmente los resultados durante el desarrollo.
+- Reservar la revisión del qāriʾ o especialista para la aprobación final de la aplicación.
 
 ## Próximo documento
 
-Según el orden aprobado, continúa `DECISION_LOGIC_NUUN_TANWEEN.md` contra la Parte 7.
+La revisión documental de Qalqalah está cerrada. Según el orden aprobado, la próxima sesión podrá continuar con `DECISION_LOGIC_NUUN_TANWEEN.md` contra la Parte 7.

@@ -37,4 +37,4 @@ El inventario verificable está en `resources/sources/catalog/LEGACY-ANALYSIS-00
 
 Las dos copias se encuentran bajo `resources/sources/private`, cuyo contenido está excluido de Git. Los manifiestos, el plan de auditoría y los resultados de revisión sí son versionables.
 
-No se corregirán los originales heredados. Toda observación se registrará por separado y toda especificación aceptada se redactará de nuevo en `knowledge` con su trazabilidad completa.
+Las copias privadas de custodia no se modificarán. Para el trabajo activo, cada documento de `analisis_tajweed_warsh` se migrará con su nombre original a la zona versionada y se corregirá directamente después de compararlo con el libro. Git conservará la trazabilidad de las correcciones. La validación manual contra el muṣḥaf certificado se realizará durante el desarrollo y la revisión del especialista quedará como control final de la aplicación.

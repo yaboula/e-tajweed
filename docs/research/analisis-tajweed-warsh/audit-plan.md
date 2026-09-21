@@ -1,20 +1,20 @@
 # Plan de auditoría de `analisis_tajweed_warsh`
 
 - **Identificador:** LEGACY-ANALYSIS-001
-- **Estado global:** auditoría heredada completada; bloqueado para implementación normativa
+- **Estado global:** revisión correctiva en curso; Qalqalah corregida
 - **Importancia:** crítica
 
 ## Cambio de método
 
 Este plan queda como registro histórico de la auditoría inicial. El trabajo activo continúa verticalmente, una sola regla cada vez: revisar, corregir, validar y sólo después elegir la siguiente.
 
-La regla activa es **Qalqalah**. Su versión corregida está en [qalqalah.md](../rules/qalqalah.md). No se continuará con nūn/tanwīn hasta cerrar la revisión pendiente de Qalqalah.
+La primera regla, **Qalqalah**, ha sido corregida en [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md). La validación manual contra el muṣḥaf se realizará durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
 
 ## Regla principal
 
-Los documentos heredados son hipótesis de trabajo. No son especificaciones aprobadas y no pueden alimentar el motor, los colores ni los golden tests hasta superar todos los controles de este plan.
+Los documentos heredados son material de trabajo derivado del libro. Se migran con sus nombres originales, se comparan uno por uno con el libro y se corrigen en el propio documento cuando exista un error.
 
-Los archivos originales se conservarán sin edición. Las correcciones y conclusiones se escribirán como artefactos nuevos y trazables.
+La copia privada y Git conservan el estado original. No se creará una especificación paralela para sustituir cada documento corregido.
 
 ## Controles que debe superar cada documento
 
@@ -29,7 +29,7 @@ Los archivos originales se conservarán sin edición. Las correcciones y conclus
 9. **Solapamientos:** demostrar qué ocurre cuando coinciden varias reglas; no resolverlos sólo mediante prioridad de color.
 10. **Pruebas:** producir positivos, negativos, fronterizos y golden tests revisados.
 11. **Presentación:** separar detección religiosa de color, estilo y accesibilidad.
-12. **Aprobación humana:** obtener revisión final del especialista cualificado.
+12. **Validación humana:** durante el desarrollo, el propietario comprobará manualmente los resultados contra un muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq. La revisión del especialista será un control final antes de declarar definitiva la aplicación.
 
 ## Estados permitidos
 
@@ -37,12 +37,14 @@ Los archivos originales se conservarán sin edición. Las correcciones y conclus
 - `structural_review`: estructura y afirmaciones localizadas, sin validar su verdad.
 - `source_check`: comparación detallada con fuentes en curso.
 - `technical_check`: Unicode, algoritmo, corpus y pruebas en curso.
-- `expert_review`: listo para valoración del especialista.
-- `approved`: puede originar conocimiento versionado.
-- `rejected`: no debe migrarse.
-- `superseded`: reemplazado por una especificación aprobada posterior.
+- `corrected`: errores documentales o técnicos corregidos contra la fuente.
+- `owner_validation`: comprobación manual contra el muṣḥaf certificado en curso.
+- `development_ready`: validado por el propietario y utilizable para implementación controlada.
+- `final_expert_review`: listo para la revisión final del especialista.
+- `final_approved`: aprobado para una versión definitiva.
+- `needs_rework`: contiene errores que todavía deben corregirse.
 
-Ningún estado anterior a `approved` permite implementar la lógica como normativa.
+La implementación controlada puede comenzar en `development_ready`. Sólo `final_approved` permite presentar una regla como definitivamente aprobada por el proyecto.
 
 ## Orden de revisión
 
@@ -76,7 +78,7 @@ Ningún estado anterior a `approved` permite implementar la lógica como normati
 
 - `Fahrass.md` — `source_check`; aceptable sólo como índice provisional de navegación; pendiente de contrastar REL-001 con la edición impresa.
 - `ARBOL_COMPLETO_REGLAS_TAJWEED.md` — `rejected`; no puede migrarse como árbol completo, especificación, golden tests ni política Unicode. Se conserva únicamente para extraer afirmaciones que deberán volver a verificarse.
-- `DECISION_LOGIC_QALQALAH.md` — `rejected`; el núcleo coincide provisionalmente con las páginas 61–62, pero el algoritmo de sukūn/waqf, los rangos Unicode y la mezcla con color impiden utilizarlo como guía de implementación.
+- `DECISION_LOGIC_QALQALAH.md` — `corrected`; migrado y corregido contra las páginas 61–62; sus resultados se comprobarán manualmente durante la implementación.
 - `DECISION_LOGIC_NUUN_TANWEEN.md` — `rejected`; el núcleo clasificatorio coincide provisionalmente con la Parte 7, pero el algoritmo no controla waṣl/waqf de forma general, depende de signos Unicode no uniformes y contiene una rama especial inalcanzable.
 - `DECISION_LOGIC_MEEM_SAKINAH.md` — `rejected`; el núcleo coincide provisionalmente con las páginas 75–76, pero el algoritmo falla sobre las convenciones del propio corpus, clasifica mal una frontera de palabra e implementa una hipótesis que declara no documentada.
 - `DECISION_LOGIC_TAFKHIM_TARQIQ.md` — `rejected`; conserva un inventario amplio de la Parte 8, pero el orden de retornos vuelve inalcanzables múltiples awjuh y excepciones, y sus coincidencias Unicode/textuales no son seguras.
@@ -130,8 +132,8 @@ Cada documento producirá, por separado:
 
 - Un informe de afirmaciones y fuentes.
 - Una lista de contradicciones, ambigüedades y preguntas abiertas.
-- Una especificación candidata nueva; nunca una edición silenciosa del legado.
+- El propio documento migrado y corregido, manteniendo su nombre original.
 - Casos de prueba candidatos con procedencia.
-- Una decisión de `approved`, `rejected` o `superseded`.
+- Un estado claro dentro del flujo de revisión y validación.
 
-Sólo las especificaciones aprobadas podrán entrar en `knowledge/rules`, `knowledge/exceptions`, `knowledge/evidence` y `knowledge/reviews`.
+Los documentos en `development_ready` podrán orientar una implementación controlada. La promoción definitiva se reservará para los resultados con validación final.

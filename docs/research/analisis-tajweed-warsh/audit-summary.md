@@ -3,8 +3,8 @@
 - **Identificador de custodia:** LEGACY-ANALYSIS-001
 - **Alcance:** 11 artefactos heredados
 - **Estado de la auditoría:** completada
-- **Estado para implementación normativa:** bloqueado
-- **Decisión global:** conservar intacto como legado; no migrar ninguno de sus algoritmos como motor de e-tajweed.
+- **Estado del trabajo:** revisión y corrección, un documento cada vez
+- **Decisión global:** conservar una copia de custodia y migrar los documentos con su nombre original para compararlos con el libro y corregirlos.
 
 ## Resultado ejecutivo
 
@@ -20,16 +20,17 @@ La decisión no es desechar el trabajo anterior. Se conservará íntegramente po
 - Paleta visual.
 - Mecanismo de resolución de solapamientos.
 
-Cada afirmación recuperable deberá volver a atravesar la cadena:
+Cada afirmación recuperable deberá atravesar la cadena:
 
 ```text
 fuente física identificada
   → página y pasaje
-  → especificación candidata
+  → corrección del documento migrado
   → ocurrencias verificadas en corpus aprobado
   → pruebas positivas, negativas y fronterizas
-  → revisión del especialista
-  → aprobación versionada
+  → validación manual del propietario contra el muṣḥaf certificado
+  → implementación controlada
+  → revisión final del especialista antes de la aprobación definitiva
 ```
 
 ## Qué se conserva intacto
@@ -48,7 +49,7 @@ Los 11 archivos se conservan byte por byte en la copia privada bajo custodia. Su
 
 `e272d53d40834884388ad8d16369462161445a7fc5e769ea64a7595026329a81`
 
-Los originales no fueron corregidos. Todas las conclusiones se escribieron en documentos nuevos.
+Esta copia privada permanece intacta como referencia histórica. En e-tajweed se migra cada documento con el mismo nombre y se corrige directamente; Git registra cada cambio.
 
 ## Decisión por artefacto
 
@@ -72,12 +73,13 @@ Informe: [arbol-completo-audit.md](./arbol-completo-audit.md).
 
 ### `DECISION_LOGIC_QALQALAH.md`
 
-- **Estado:** `rejected`.
-- **Puede recuperarse:** definición básica, letras y grados respaldados provisionalmente por las páginas 61–62.
-- **Debe crearse de nuevo:** detección de sukūn, contexto waṣl/waqf, modelo de grados y pruebas.
-- **Razón principal:** ausencia de vocal tratada como sukūn y rangos Unicode usados como semántica de waqf.
+- **Estado:** `corrected`.
+- **Acción realizada:** migrado con su nombre original y corregido contra las páginas 61–62.
+- **Correcciones principales:** sukūn no inferido por ausencia de vocal, waqf explícito, rangos Unicode corregidos y color separado de la decisión religiosa.
+- **Validación prevista:** comprobación manual del propietario contra el muṣḥaf coloreado y certificado durante la implementación.
 
 Informe: [qalqalah-audit.md](./qalqalah-audit.md).
+Documento corregido: [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md).
 
 ### `DECISION_LOGIC_NUUN_TANWEEN.md`
 
@@ -153,16 +155,15 @@ Informe: [palette-audit.md](./palette-audit.md).
 
 ## Qué se migrará para revisar
 
-No se migrará lógica ejecutable. Se extraerán, en documentos nuevos y uno por uno:
+Los documentos se migrarán uno por uno con sus nombres originales. Para cada uno se:
 
-- Definiciones respaldadas por una página concreta.
-- Condiciones generales respaldadas.
-- Excepciones y awjuh con ocurrencias identificadas.
-- Preferencias de lectura exactamente como las formule la fuente.
-- Preguntas abiertas y desacuerdos.
-- Casos candidatos para revisión humana.
+- comparará cada afirmación con el libro;
+- corregirán errores religiosos, lógicos, Unicode o de trazabilidad en el propio archivo;
+- conservarán las partes correctas;
+- registrarán las dudas sin inventar una respuesta;
+- prepararán casos concretos para la validación manual del propietario.
 
-La extracción nunca copiará una etiqueta como “completo”, “sin excepciones” o “verificación matemática” sin demostrarla de nuevo.
+Una etiqueta como “completo”, “sin excepciones” o “verificación matemática” sólo se conservará si puede demostrarse.
 
 ## Qué se creará desde cero
 
@@ -190,9 +191,11 @@ Se necesita identificar la edición física de REL-001 y contrastar cada página
 
 Cada regla deberá contrastarse con obras autorizadas para Warsh por ṭarīq al-Azraq. `docs/refrences.md` contiene el catálogo inicial, pero todavía deben registrarse edición, página y licencia de cada obra efectivamente usada.
 
-### Especialista cualificado
+### Revisión humana y especialista cualificado
 
-Debe existir una persona responsable —profesor, qāriʾ o especialista cualificado— que pueda aprobar:
+Durante el desarrollo, el propietario realizará la comprobación manual precisa contra un muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq. Esta validación permite avanzar de forma controlada.
+
+Antes de declarar definitiva la aplicación se buscará el respaldo final de un profesor, qāriʾ o especialista cualificado para revisar:
 
 - Exactitud religiosa.
 - Awjuh permitidos y preferencias.
@@ -212,15 +215,12 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, una sola regla cada vez**. La regla activa es Qalqalah y su especificación candidata está en [qalqalah.md](../rules/qalqalah.md). No se abrirá la revisión de nūn/tanwīn ni de otra regla hasta cerrar ésta.
+El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah está corregida en [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md). La validación manual de sus resultados se realizará durante la implementación, por lo que la siguiente sesión puede continuar con nūn/tanwīn.
 
 Orden recomendado:
 
-1. Verificar físicamente las páginas 61–62 de REL-001.
-2. Contrastar las decisiones y preguntas abiertas con autoridades de Warsh por ṭarīq al-Azraq.
-3. Seleccionar casos desde un corpus y un muṣḥaf de referencia autorizados.
-4. Obtener la revisión del especialista cualificado.
-5. Aprobar los casos positivos, negativos, de waṣl, waqf e incertidumbre.
-6. Sólo entonces promover Qalqalah a conocimiento normativo y elegir la regla siguiente.
+1. Mantener Qalqalah como documento corregido contra el libro.
+2. Revisar y corregir `DECISION_LOGIC_NUUN_TANWEEN.md` como próximo documento, sin abrir otros a la vez.
+3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
 
-Hasta completar esos controles para Qalqalah, su resultado correcto es **especificación candidata, fuentes preservadas y cero lógica religiosa normativa implementada**.
+La revisión del especialista se conserva como control final de la aplicación y no como bloqueo de la revisión documental ni del desarrollo.
