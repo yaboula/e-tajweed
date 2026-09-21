@@ -2,19 +2,19 @@
 
 - **Artefacto:** LEGACY-ANALYSIS-001 / `PALETA_COLORES_WARSH.md`
 - **SHA-256:** `ae3f00b1481c7bd53f2f6ce4fe32fa3972df8d25047323871d538cac892ff1c9`
-- **Estado:** `rejected`
-- **Decisión:** rechazado como sistema visual, política de solapamientos o fuente de reglas; los valores podrán conservarse únicamente como referencia histórica.
+- **Estado:** `accepted_product_reference`
+- **Decisión vigente:** por decisión del propietario, define las nueve categorías visuales y sus colores. No define por sí sola las condiciones religiosas de detección.
 - **Fuente declarada:** “Diagrama circular Tajweed Warsh”, sin identificación verificable.
 
-## Veredicto
+## Decisión posterior que prevalece
 
-La paleta mezcla conocimiento religioso, duración, importancia pedagógica, resolución de solapamientos y CSS. No identifica una fuente visual verificable, no presenta licencia, no contiene pruebas de accesibilidad y propone tachar letras coránicas.
+El objetivo de e-tajweed es la detección exacta y la coloración de las nueve entradas de esta paleta. Por tanto, sus categorías y valores HEX son una referencia válida y obligatoria del producto.
 
-Varios pares de color del CSS fallan el contraste mínimo para texto normal. El sistema comunica las reglas exclusivamente mediante color y asigna una sola prioridad visual a letras donde pueden coexistir varias anotaciones válidas.
+Los hallazgos restantes de este informe se conservan únicamente como advertencias de implementación: accesibilidad, solapamientos, CSS y trazabilidad deberán resolverse sin rechazar ni cambiar el mapeo aprobado.
 
-No se migrará ningún valor HEX como decisión de diseño. La futura presentación se diseñará después de aprobar las reglas y deberá superar revisión visual, accesibilidad, RTL, tipografía coránica y validación humana.
+La paleta no reemplaza al libro ni a los documentos de decisión para detectar una regla. Detección y coloración permanecen separadas internamente, pero ambas son resultados obligatorios de la aplicación.
 
-## Elementos que pueden conservarse sólo como requisitos candidatos
+## Elementos aceptados y controles pendientes
 
 El documento revela algunas intenciones útiles, pero no soluciones aprobadas:
 
@@ -24,9 +24,11 @@ El documento revela algunas intenciones útiles, pero no soluciones aprobadas:
 - Ofrecer una leyenda.
 - Distinguir fenómenos específicos del perfil de Warsh seleccionado.
 
-Estas intenciones deberán reescribirse como requisitos de experiencia de usuario. No validan las categorías, colores ni prioridades concretas del legado.
+Estas intenciones complementan las nueve categorías y colores ya aceptados por decisión del propietario. Las advertencias técnicas no autorizan a cambiar ese mapeo.
 
-## Hallazgos bloqueantes
+## Hallazgos históricos de implementación
+
+> **Decisión vigente:** los hallazgos siguientes sirven para mejorar la implementación, la accesibilidad y la validación. No rechazan las nueve entradas ni sus valores HEX.
 
 ### PAL-001 — La fuente visual no es identificable
 
@@ -212,7 +214,7 @@ Usando la fórmula de luminancia relativa de WCAG para los pares sugeridos o imp
 
 Que un par supere contraste no valida el sistema completo ni permite usar color como único canal.
 
-## Requisitos mínimos para una nueva especificación visual
+## Requisitos mínimos para implementar la paleta válida
 
 La futura capa de presentación deberá:
 
@@ -245,15 +247,15 @@ La futura capa de presentación deberá:
 - Copia/pegado y reconstrucción exacta del texto.
 - Comparación visual humana con páginas de referencia.
 
-## Decisión de migración
+## Decisión de migración vigente
 
-- Conservar el archivo original como referencia histórica.
-- No migrar los HEX, CSS, prioridades ni conteos como especificación.
-- Prohibir el tachado del texto coránico.
-- No usar la paleta para resolver solapamientos.
-- Diseñar una nueva capa visual desde anotaciones semánticas aprobadas.
-- Exigir trazabilidad, accesibilidad y aprobación visual antes de adoptar un tema.
+- Migrar `PALETA_COLORES_WARSH.md` con su nombre original cuando corresponda en el orden de trabajo.
+- Adoptar sus nueve categorías y valores HEX como referencia obligatoria del producto.
+- Tratar sus ejemplos CSS y prioridades como detalles de implementación que deberán probarse, no como permiso para cambiar la paleta.
+- No usar el color como evidencia para detectar una regla ni como único mecanismo para resolver solapamientos.
+- Aplicar la coloración mediante anotaciones que no alteren el texto coránico.
+- Verificar visualmente el resultado contra el muṣḥaf certificado durante el desarrollo.
 
 ## Cierre del orden de auditoría
 
-Con este documento termina la revisión en el orden aprobado de los once artefactos de `analisis_tajweed_warsh`. El siguiente paso no es implementar estas reglas: corresponde consolidar las decisiones de migración y preparar la revisión de fuentes/experto antes de crear especificaciones normativas.
+Este informe queda como historial técnico. La decisión posterior del propietario fija como objetivo la detección exacta y la coloración de las nueve entradas de la paleta. La revisión del especialista será final y no bloquea el desarrollo.

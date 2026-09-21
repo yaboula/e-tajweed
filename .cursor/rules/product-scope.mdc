@@ -1,0 +1,18 @@
+---
+description: Alcance permanente de e-tajweed: detección exacta y coloración de nueve reglas
+alwaysApply: true
+---
+
+# Alcance obligatorio de e-tajweed
+
+- El producto detecta y colorea reglas de tajwīd en texto coránico de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq.
+- No analiza, escucha, corrige ni califica la pronunciación del usuario.
+- El alcance visual consta exactamente de las nueve entradas definidas por `PALETA_COLORES_WARSH.md`.
+- `PALETA_COLORES_WARSH.md` es la referencia válida del proyecto para categorías y colores; no debe rechazarse ni sustituirse sin decisión explícita del propietario.
+- Las subreglas religiosas explican la detección, pero su salida debe terminar en una de las nueve entradas de la paleta cuando corresponda.
+- El libro y los documentos `DECISION_LOGIC_*` determinan qué detectar; la paleta determina cómo colorear el resultado.
+- Detección y coloración pueden estar separadas en la arquitectura, pero ambas forman el resultado obligatorio de la aplicación.
+- El color nunca puede usarse como evidencia para detectar una regla.
+- La coloración es una capa de anotación: no elimina, sustituye ni reordena texto coránico.
+- La validación durante el desarrollo la realiza el propietario contra un muṣḥaf coloreado y certificado; el especialista es el control final futuro.
+- Los documentos heredados se copian íntegros, se editan con el mismo nombre y cada corrección lleva un comentario explicativo.

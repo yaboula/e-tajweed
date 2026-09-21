@@ -3,6 +3,8 @@
 
 > **Comentario de revisión e-tajweed (2026-09-21):** este archivo fue copiado íntegramente desde `Mesa de Trabajo3/analisis_tajweed_warsh/DECISION_LOGIC_QALQALAH.md` y se verificó la copia antes de editarla (`SHA-256 76410c10d1a3c21f249a49eeb4e1b00686700c69619eaa0b7ddb33c950b05537`). Después se corrigió en este mismo archivo. Cada cambio aparece acompañado de su explicación. La validación visual se realizará durante el desarrollo contra el muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq; la revisión del especialista queda como control final de la aplicación.
 
+> **Comentario de alcance e-tajweed:** la aplicación no evalúa pronunciación. En este documento, las descripciones de sonido explican la regla; el resultado requerido es detectar exactamente su intervalo y colorearlo en azul claro `#00BFFF`, una de las nueve salidas de la paleta válida.
+
 ---
 
 ## 📋 DEFINICIONES TÉCNICAS
@@ -101,7 +103,7 @@ flowchart TD
 | **Harakat** | ساكنة con sukūn demostrado; la ausencia de vocal visible produce estado desconocido |
 | **Posición** | وسط الكلمة (medio de palabra) |
 | **Contexto** | posición interna confirmada; no se deduce por “no final de āyah” |
-| **Presentación heredada** | #00BFFF (Azul Claro); no participa en la detección |
+| **Coloración de referencia** | #00BFFF (Azul Claro); se aplica después de detectar qalqalah |
 | **Intensidad** | SUAVE / MENOR |
 | **Intersección** | No documentada de forma exhaustiva en REL-001 |
 | **Excepción** | No documentada de forma exhaustiva en REL-001 |
@@ -142,7 +144,7 @@ FIN SI
 | **Harakat** | ساكنة (con sukūn ْ por وقف) |
 | **Posición** | آخر الكلمة (final de palabra) |
 | **Contexto** | وقف (pausa al final de aya o palabra) |
-| **Presentación heredada** | #00BFFF (Azul Claro); no participa en la detección |
+| **Coloración de referencia** | #00BFFF (Azul Claro); se aplica después de detectar qalqalah |
 | **Intensidad** | FUERTE / MAYOR |
 | **Intersección** | Con تشديد (puede tener tashdīd) |
 | **Excepción** | No documentada de forma exhaustiva en REL-001 |
@@ -260,7 +262,7 @@ flowchart TD
 - **Diferenciación:** Por metadata de intensidad
 - **Visualización:** Mismo color, diferente tooltip/nota
 
-> **Comentario de revisión e-tajweed:** esta sección se conserva como propuesta visual heredada. No procede del libro y no forma parte de la decisión religiosa. Cambiar el color nunca debe cambiar la detección.
+> **Comentario de revisión e-tajweed:** por decisión del propietario, `PALETA_COLORES_WARSH.md` es la referencia válida para la coloración. El libro determina cuándo existe qalqalah y la paleta determina que su color es azul claro `#00BFFF`.
 
 ---
 
@@ -271,7 +273,7 @@ flowchart TD
 - Harakat: ْ (sukūn)
 - Posición: وسط الكلمة (entre خل y نا)
 - Tipo: **قلقلة صغرى**
-- Presentación heredada: #00BFFF
+- Coloración de referencia: #00BFFF
 - Intensidad: ⭐ SUAVE
 
 ### Ejemplo 2: الْفَلَقْ
@@ -279,7 +281,7 @@ flowchart TD
 - Harakat: ْ (sukūn por وقف)
 - Posición: آخر الكلمة
 - Tipo: **قلقلة كبرى**
-- Presentación heredada: #00BFFF
+- Coloración de referencia: #00BFFF
 - Intensidad: ⭐⭐ FUERTE
 
 ### Ejemplo 3: بِالْحَقّْ (con وقف)
@@ -287,29 +289,30 @@ flowchart TD
 - Harakat: ْ (sukūn) + ّ (شدة)
 - Posición: آخر الكلمة
 - Tipo: **قلقلة كبرى**
-- Presentación heredada: #00BFFF
+- Coloración de referencia: #00BFFF
 - Intensidad: ⭐⭐⭐ MÁS FUERTE
 
-> **Comentario de revisión e-tajweed:** los campos `Color` de estos ejemplos se renombran `Presentación heredada` para que no se confunda una elección de interfaz con el resultado religioso.
+> **Comentario de revisión e-tajweed:** la coloración azul claro es un resultado obligatorio de Qalqalah. Se mantiene separada de la condición religiosa para impedir que el color se utilice como evidencia de detección.
 
 ---
 
 ## ✅ CRITERIOS DE ÉXITO
 
-### Detector debe:
+### Sistema de detección y coloración debe:
 1. ✅ Identificar las 5 letras de قطب جد
 2. ✅ Verificar que letra esté ساكنة
 3. ✅ Determinar posición (medio/final)
 4. ✅ Detectar contexto وقف vs وصل
 5. ✅ Identificar presencia de شدة
 6. ✅ Asignar tipo correcto (صغرى/كبرى)
-7. ✅ Registrar nivel de intensidad
-8. ✅ Devolver incertidumbre cuando no pueda demostrar sukūn o contexto
-9. ✅ Conservar el intervalo exacto del texto coránico sin modificarlo
-10. ✅ Registrar fuente, página y modo de lectura
-11. ✅ Permitir validación manual contra el muṣḥaf certificado durante el desarrollo
+7. ✅ Asignar la salida visual Qalqalah y aplicar `#00BFFF` según la paleta válida
+8. ✅ Registrar nivel de intensidad
+9. ✅ Devolver incertidumbre cuando no pueda demostrar sukūn o contexto
+10. ✅ Conservar el intervalo exacto del texto coránico sin modificarlo
+11. ✅ Registrar fuente, página y modo de lectura
+12. ✅ Permitir validación manual contra el muṣḥaf certificado durante el desarrollo
 
-> **Comentario de revisión e-tajweed:** aplicar un color no es criterio de éxito del detector. Se sustituyó por integridad textual, trazabilidad, incertidumbre y validación manual.
+> **Comentario de revisión e-tajweed:** se aclara el objetivo del producto: la detección exacta y la coloración correcta son criterios de éxito conjuntos. Se mantienen como etapas separadas para proteger la lógica y el texto coránico.
 
 ---
 
@@ -320,7 +323,7 @@ flowchart TD
 - **Mnemónico:** قطب جد
 - **Color asignado:** #00BFFF (Azul Claro) según PALETA_COLORES_WARSH.md
 
-> **Comentario de revisión e-tajweed:** la referencia de páginas se corrige y el color queda identificado expresamente como procedente de la paleta heredada, no de REL-001.
+> **Comentario de revisión e-tajweed:** la referencia de páginas se corrige. REL-001 respalda la detección y la paleta válida del proyecto respalda el color azul claro.
 
 ---
 

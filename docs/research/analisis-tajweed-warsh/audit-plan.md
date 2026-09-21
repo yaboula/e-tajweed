@@ -42,6 +42,7 @@ La copia privada y Git conservan el estado original. No se creará una especific
 - `development_ready`: validado por el propietario y utilizable para implementación controlada.
 - `final_expert_review`: listo para la revisión final del especialista.
 - `final_approved`: aprobado para una versión definitiva.
+- `accepted_product_reference`: decisión válida del propietario para alcance, categorías o presentación.
 - `needs_rework`: contiene errores que todavía deben corregirse.
 
 La implementación controlada puede comenzar en `development_ready`. Sólo `final_approved` permite presentar una regla como definitivamente aprobada por el proyecto.
@@ -72,7 +73,7 @@ La implementación controlada puede comenzar en `development_ready`. Sólo `fina
 
 ### Etapa 4 — Presentación
 
-- `PALETA_COLORES_WARSH.md` sólo después de estabilizar las reglas. La paleta será una decisión de presentación accesible, nunca una fuente religiosa ni un mecanismo para resolver solapamientos.
+- `PALETA_COLORES_WARSH.md` es la referencia válida del proyecto para las nueve salidas visuales. Se usa desde el inicio como objetivo de coloración; las mejoras técnicas no pueden sustituir sus categorías o colores sin decisión del propietario.
 
 ## Registro inicial por documento
 
@@ -86,7 +87,7 @@ La implementación controlada puede comenzar en `development_ready`. Sólo `fina
 - `DECISION_LOGIC_FATH_IMALAH.md` — `rejected`; conserva numerosas categorías de la Parte 10, pero evalúa excepciones e iltiqāʾ al-sākinayn después de retornos definitivos y depende de análisis contextuales no definidos.
 - `DECISION_LOGIC_MUDUD.md` — `rejected`; inventaría muchas categorías de la Parte 11, pero su algoritmo borra excepciones y awjuh, deja layn sin resolución y aplica prioridad a palabras en vez de spans concretos.
 - `DECISION_LOGIC_HAMZ.md` — `rejected`; conserva un catálogo amplio de las Partes 12-A/12-B, pero contiene ramas inalcanzables, pierde awjuh correlacionados y depende de una sección de fuente con correcciones editoriales no resueltas.
-- `PALETA_COLORES_WARSH.md` — `rejected`; carece de fuente verificable, usa color como único canal, falla contrastes y propone tachar texto coránico y resolver solapamientos mediante prioridad visual.
+- `PALETA_COLORES_WARSH.md` — `accepted_product_reference`; define las nueve categorías y colores obligatorios. Las observaciones de accesibilidad o implementación se resolverán sin rechazar ni remapear la paleta.
 
 ## Hallazgos preliminares bloqueantes
 
@@ -112,13 +113,13 @@ El documento infiere reglas a partir de la presencia o ausencia visual de sukūn
 
 `DECISION_LOGIC_MEEM_SAKINAH.md` incluye en su pseudocódigo un resultado descrito como “caso no documentado en libro - verificar”. Esta rama queda prohibida para implementación hasta localizar una fuente aceptada y obtener revisión.
 
-### AUD-006 — La paleta carece de fundamento trazable suficiente
+### AUD-006 — Función de la paleta aclarada por el propietario
 
-`PALETA_COLORES_WARSH.md` cita como fuente visual un “Diagrama circular Tajweed Warsh” sin identificación verificable. Sus prioridades de color mezclan presentación con resolución de reglas coincidentes y no incluyen validación de accesibilidad.
+`PALETA_COLORES_WARSH.md` ha sido declarada referencia válida del producto para las nueve categorías visuales. No sustituye al libro como fuente de las condiciones religiosas, pero sus asociaciones de categoría y color son obligatorias.
 
-### AUD-007 — Propuesta visual no aceptable
+### AUD-007 — Implementación visual pendiente de validación
 
-La paleta propone `text-decoration: line-through` para letras no pronunciadas o asimiladas. e-tajweed no aplicará tachado al texto coránico. La información deberá representarse mediante una capa no destructiva, respetuosa y accesible, aprobada visualmente.
+Los detalles de CSS, contraste y canales complementarios se comprobarán durante el desarrollo contra el muṣḥaf de referencia. Toda representación será una capa no destructiva y no alterará los caracteres coránicos.
 
 ### AUD-008 — Etiquetas de completitud sin evidencia suficiente
 

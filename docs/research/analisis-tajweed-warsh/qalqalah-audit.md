@@ -94,13 +94,13 @@ Las líneas 95–97 y 131–133 declaran que no existen excepciones ni intersecc
 
 Además, el propio documento reconoce interacción con shaddah, waqf y posición. La futura especificación deberá tratar esas dimensiones como contexto, no como notas laterales.
 
-### QAL-008 — El color está mezclado con la detección
+### QAL-008 — La detección y el mapeo de color necesitan etapas explícitas
 
-Las líneas 71–78, 93, 112, 129, 148, 153, 199–207 y 228–231 incorporan `#00BFFF` dentro del algoritmo. El color no forma parte de la regla religiosa y no debe aparecer en la salida normativa del detector.
+Las líneas 71–78, 93, 112, 129, 148, 153, 199–207 y 228–231 incorporan `#00BFFF` dentro de las condiciones del algoritmo. El color no demuestra que exista la regla, pero sí es una salida obligatoria de la aplicación una vez detectada.
 
-El motor devolverá una anotación semántica; la aplicación decidirá cómo representarla de forma accesible. Cambiar una paleta nunca podrá cambiar la detección.
+El motor devolverá la anotación semántica Qalqalah y su clave de paleta; la capa de coloración aplicará el azul claro `#00BFFF` definido por la referencia válida. La detección no dependerá del color.
 
-### QAL-009 — Los criterios de éxito incluyen presentación, pero omiten integridad y trazabilidad
+### QAL-009 — Los criterios de éxito deben unir coloración, integridad y trazabilidad
 
 Las líneas 263–273 consideran éxito aplicar un color y un nivel de intensidad, pero no exigen:
 
@@ -140,7 +140,7 @@ identidad de la letra
   → estado de revisión
 ```
 
-La salida no contendrá colores. Si el modo de recitación o el sukūn no pueden determinarse, el resultado será `unknown` o `requires_review`.
+La salida incluirá la identidad semántica de Qalqalah y la referencia a su entrada azul claro de la paleta. Si el modo de recitación o el sukūn no pueden determinarse, el resultado será `unknown` o `requires_review` y no se inventará una coloración.
 
 ## Casos que el documento corregido incluye para validación
 
@@ -160,7 +160,7 @@ La salida no contendrá colores. Si el modo de recitación o el sukūn no pueden
 - Conservar una copia privada intacta como custodia histórica.
 - Migrar el archivo con su nombre original.
 - Corregir el pseudocódigo inseguro en el propio documento.
-- Separar los colores de la decisión religiosa.
+- Separar la detección del mapeo técnico, conservando `#00BFFF` como salida obligatoria para Qalqalah.
 - Validar manualmente los resultados durante el desarrollo.
 - Reservar la revisión del qāriʾ o especialista para la aprobación final de la aplicación.
 

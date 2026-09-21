@@ -17,8 +17,9 @@ La decisión no es desechar el trabajo anterior. Se conservará íntegramente po
 - Fuente de excepciones aprobadas.
 - Golden tests.
 - Política Unicode.
-- Paleta visual.
 - Mecanismo de resolución de solapamientos.
+
+La excepción es `PALETA_COLORES_WARSH.md`: por decisión del propietario, es la referencia válida para las nueve categorías y colores de salida. No se usa como fuente de las condiciones religiosas de detección.
 
 Cada afirmación recuperable deberá atravesar la cadena:
 
@@ -146,10 +147,10 @@ Informe: [hamz-audit.md](./hamz-audit.md).
 
 ### `PALETA_COLORES_WARSH.md`
 
-- **Estado:** `rejected`.
-- **Se conserva como:** referencia histórica de una intención visual.
-- **Debe crearse de nuevo:** toda la capa visual y accesible.
-- **Razón principal:** fuente no verificable, contrastes fallidos, dependencia exclusiva del color, prioridades doctrinales por tono y tachado del texto coránico.
+- **Estado:** `accepted_product_reference`.
+- **Se acepta como:** definición obligatoria de las nueve categorías visuales y sus colores.
+- **No se usa como:** fuente religiosa para decidir si una regla está presente.
+- **Implementación:** puede añadir accesibilidad y metadatos sin cambiar el mapeo de la paleta.
 
 Informe: [palette-audit.md](./palette-audit.md).
 
