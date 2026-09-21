@@ -1,7 +1,7 @@
 # Estructura general del proyecto
 
-**Estado:** aprobada como estructura inicial  
-**Fecha:** 2026-09-21
+- **Estado:** aprobada como estructura inicial
+- **Fecha:** 2026-09-21
 
 ## Objetivo
 
