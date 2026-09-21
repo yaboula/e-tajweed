@@ -104,12 +104,13 @@ Documento corregido: [DECISION_LOGIC_MEEM_SAKINAH.md](./DECISION_LOGIC_MEEM_SAKI
 
 ### `DECISION_LOGIC_TAFKHIM_TARQIQ.md`
 
-- **Estado:** `rejected`.
-- **Puede recuperarse:** inventario amplio de categorías, ejemplos, awjuh y preferencias de la Parte 8.
-- **Debe crearse de nuevo:** resolución por ocurrencia, excepciones prioritarias, waqf y configuraciones correlacionadas.
-- **Razón principal:** el orden de retornos elimina numerosas excepciones y lecturas permitidas.
+- **Estado:** `corrected`.
+- **Acción realizada:** migrado con su nombre original y corregido contra las páginas 79–88.
+- **Correcciones principales:** excepciones y awjuh antes de reglas generales, perfiles de badal correlacionados, waṣl/waqf explícitos, elegibilidad de ishmām/rawm, U+06EA sólo como señal editorial y ocurrencias separadas de strings vocalizados.
+- **Coloración:** tafkhīm/taghlīẓ azul oscuro `#00008B`; tarqīq negro `#000000`; los casos de dos awjuh conservan ambas salidas y su preferencia.
 
 Informe: [tafkhim-tarqiq-audit.md](./tafkhim-tarqiq-audit.md).
+Documento corregido: [DECISION_LOGIC_TAFKHIM_TARQIQ.md](./DECISION_LOGIC_TAFKHIM_TARQIQ.md).
 
 ### `DECISION_LOGIC_IDGHAM.md`
 
@@ -218,12 +219,12 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah, nūn/tanwīn y mīm sākinah están corregidos. La validación manual de sus resultados se realizará durante la implementación, por lo que la siguiente sesión puede continuar con tafkhīm/tarqīq.
+El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah, nūn/tanwīn, mīm sākinah y tafkhīm/tarqīq están corregidos. La validación manual de sus resultados se realizará durante la implementación, por lo que la siguiente sesión puede continuar con idghām.
 
 Orden recomendado:
 
-1. Mantener Qalqalah, nūn/tanwīn y mīm sākinah como documentos corregidos contra el libro.
-2. Revisar y corregir `DECISION_LOGIC_TAFKHIM_TARQIQ.md` como próximo documento, sin abrir otros a la vez.
+1. Mantener Qalqalah, nūn/tanwīn, mīm sākinah y tafkhīm/tarqīq como documentos corregidos contra el libro.
+2. Revisar y corregir `DECISION_LOGIC_IDGHAM.md` como próximo documento, sin abrir otros a la vez.
 3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
 
 La revisión del especialista se conserva como control final de la aplicación y no como bloqueo de la revisión documental ni del desarrollo.

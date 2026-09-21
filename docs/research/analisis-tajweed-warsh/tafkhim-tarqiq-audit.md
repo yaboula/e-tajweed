@@ -1,18 +1,18 @@
 # Auditoría de `DECISION_LOGIC_TAFKHIM_TARQIQ.md`
 
 - **Artefacto:** LEGACY-ANALYSIS-001 / `DECISION_LOGIC_TAFKHIM_TARQIQ.md`
-- **SHA-256:** `4c28f82edce393a405cf8c6d5f02a18d18870be04eee0eaecb6d40b08c9facf1`
-- **Estado:** `rejected`
-- **Decisión:** rechazado como guía directa de implementación; contiene una extracción amplia de REL-001, pero sus algoritmos pierden excepciones y awjuh por el orden de evaluación.
+- **SHA-256 del original antes de editar:** `4c28f82edce393a405cf8c6d5f02a18d18870be04eee0eaecb6d40b08c9facf1`
+- **Estado:** `corrected`
+- **Decisión:** migrado con el mismo nombre y corregido en el propio documento contra REL-001, páginas 79–88.
 - **Fuente local contrastada:** REL-001 / `parte 8.md`.
 
 ## Veredicto
 
-El documento es una recopilación extensa de la Parte 8 y conserva muchas listas, ejemplos y preferencias declaradas por el libro. No obstante, transforma ese material en árboles secuenciales que no mantienen las relaciones entre regla general, excepción, wajh permitido, preferencia y contexto de recitación.
+El original era una recopilación extensa de la Parte 8 y conservaba muchas listas, ejemplos y preferencias declaradas por el libro. Sin embargo, las transformaba en árboles secuenciales que no mantenían las relaciones entre regla general, excepción, wajh permitido, preferencia y contexto de recitación. Esos defectos quedaron corregidos en `DECISION_LOGIC_TAFKHIM_TARQIQ.md`.
 
-El defecto más grave está en rāʾ: varias ramas de `وجهان` y de tafkhīm excepcional son inalcanzables porque una condición general retorna antes. También se pierden combinaciones autorizadas con badal, se confunden palabras con ocurrencias y se usan cadenas vocalizadas como identificadores estables.
+El defecto más grave estaba en rāʾ: varias ramas de `وجهان` y de tafkhīm excepcional eran inalcanzables porque una condición general retornaba antes. La corrección resuelve primero los catálogos especiales, conserva configuraciones correlacionadas con badal y sustituye las cadenas vocalizadas por identificadores de ocurrencia candidatos.
 
-La parte religiosa continúa pendiente de validación por un profesor, qāriʾ o especialista cualificado. La amplitud del documento no lo convierte en una especificación aprobada.
+Durante la implementación, el propietario validará manualmente los resultados contra el muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq. La revisión por un profesor, qāriʾ o especialista cualificado se conserva como control final cuando esté disponible.
 
 ## Elementos respaldados provisionalmente por REL-001
 
@@ -52,7 +52,9 @@ REL-001, líneas 109–178, enumera condiciones de tarqīq, tafkhīm, casos con 
 
 Lo que queda rechazado es la conversión de esas listas en una cascada de retornos sin precedencia religiosa formal.
 
-## Hallazgos bloqueantes
+## Hallazgos corregidos
+
+Los códigos siguientes conservan el diagnóstico histórico del original identificado por el hash anterior. Su resolución está aplicada y explicada mediante comentarios visibles en el documento corregido.
 
 ### TTR-001 — Los casos especiales de rāʾ están situados después de retornos generales
 
@@ -208,9 +210,9 @@ Las líneas 548–549 devuelven `ERROR: caso no clasificado`. Una forma desconoc
 
 La salida deberá distinguir `not_applicable`, `unknown`, `unsupported_input` y `requires_review` con evidencia trazable.
 
-## Modelo mínimo que deberá reemplazarlo
+## Modelo mínimo aplicado
 
-La futura especificación deberá representar, como mínimo:
+El documento corregido representa, como mínimo:
 
 ```text
 token coránico inmutable + identificador de ocurrencia
@@ -229,7 +231,7 @@ token coránico inmutable + identificador de ocurrencia
 
 Las excepciones no se implementarán mediante strings sueltos. Las combinaciones con badal, fatḥ, taqlīl o imālah deberán ser configuraciones compatibles, no etiquetas independientes.
 
-## Casos que la nueva especificación deberá incluir
+## Casos para la implementación y las pruebas
 
 - Cada grupo general de letras, con casos positivos y negativos.
 - Alif, wāw de madd y yāʾ de madd bajo letras precedentes verificadas.
@@ -251,13 +253,14 @@ Las excepciones no se implementarán mediante strings sueltos. Las combinaciones
 
 ## Decisión de migración
 
-- Conservar el archivo original como legado y como inventario de preguntas.
-- No migrar ninguno de sus algoritmos al motor.
-- No convertir sus strings en listas normativas de excepciones.
-- Recuperar las afirmaciones respaldadas por REL-001 en especificaciones más pequeñas.
-- Modelar awjuh, preferencias y dependencias como datos explícitos y correlacionados.
-- Verificar cada forma contra el corpus completo y una fuente autorizada.
-- Mantener toda conclusión religiosa como candidata hasta revisión del especialista.
+- El original permanece intacto en la fuente y en la custodia histórica.
+- Se copió el archivo con el mismo nombre y se verificó su SHA-256 antes de editarlo.
+- Se corrigieron tablas, árboles y algoritmos en esa copia, dejando comentarios explicativos.
+- Los awjuh, preferencias y dependencias se modelan como datos explícitos y correlacionados.
+- Las excepciones se resuelven antes de las reglas generales y lo desconocido devuelve `requires_review`.
+- Tafkhīm/taghlīẓ se mapea a azul oscuro `#00008B`; tarqīq, a negro `#000000`.
+- Las formas se enlazarán a ocurrencias verificadas, no a igualdad de strings vocalizados.
+- La validación manual corresponde al desarrollo; la aprobación definitiva conserva la revisión final del especialista.
 
 ## Próximo documento
 
