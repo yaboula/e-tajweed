@@ -77,7 +77,7 @@ Ningún estado anterior a `approved` permite implementar la lógica como normati
 - `DECISION_LOGIC_IDGHAM.md` — `rejected`; recupera pares citados en la Parte 9, pero convierte ejemplos en listas exclusivas, omite waṣl/waqf, no implementa idghām kabīr y extiende iẓhār fuera de su dominio.
 - `DECISION_LOGIC_FATH_IMALAH.md` — `rejected`; conserva numerosas categorías de la Parte 10, pero evalúa excepciones e iltiqāʾ al-sākinayn después de retornos definitivos y depende de análisis contextuales no definidos.
 - `DECISION_LOGIC_MUDUD.md` — `rejected`; inventaría muchas categorías de la Parte 11, pero su algoritmo borra excepciones y awjuh, deja layn sin resolución y aplica prioridad a palabras en vez de spans concretos.
-- `DECISION_LOGIC_HAMZ.md` — `unreviewed`; referencias declaradas: Partes 12-A y 12-B, páginas 117-154.
+- `DECISION_LOGIC_HAMZ.md` — `rejected`; conserva un catálogo amplio de las Partes 12-A/12-B, pero contiene ramas inalcanzables, pierde awjuh correlacionados y depende de una sección de fuente con correcciones editoriales no resueltas.
 - `PALETA_COLORES_WARSH.md` — `structural_review`; bloqueada como especificación visual.
 
 ## Hallazgos preliminares bloqueantes
