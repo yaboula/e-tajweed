@@ -71,7 +71,7 @@ Ningún estado anterior a `approved` permite implementar la lógica como normati
 - `Fahrass.md` — `source_check`; aceptable sólo como índice provisional de navegación; pendiente de contrastar REL-001 con la edición impresa.
 - `ARBOL_COMPLETO_REGLAS_TAJWEED.md` — `rejected`; no puede migrarse como árbol completo, especificación, golden tests ni política Unicode. Se conserva únicamente para extraer afirmaciones que deberán volver a verificarse.
 - `DECISION_LOGIC_QALQALAH.md` — `rejected`; el núcleo coincide provisionalmente con las páginas 61–62, pero el algoritmo de sukūn/waqf, los rangos Unicode y la mezcla con color impiden utilizarlo como guía de implementación.
-- `DECISION_LOGIC_NUUN_TANWEEN.md` — `unreviewed`; referencia declarada: Parte 7.
+- `DECISION_LOGIC_NUUN_TANWEEN.md` — `rejected`; el núcleo clasificatorio coincide provisionalmente con la Parte 7, pero el algoritmo no controla waṣl/waqf de forma general, depende de signos Unicode no uniformes y contiene una rama especial inalcanzable.
 - `DECISION_LOGIC_MEEM_SAKINAH.md` — `structural_review`; contiene al menos un caso expresamente descrito como no documentado y pendiente de verificar.
 - `DECISION_LOGIC_TAFKHIM_TARQIQ.md` — `unreviewed`; referencia declarada: Parte 8, páginas 77-88.
 - `DECISION_LOGIC_IDGHAM.md` — `unreviewed`; referencia declarada: Parte 9, páginas 91-94.
