@@ -1,14 +1,14 @@
 # Plan de auditoría de `analisis_tajweed_warsh`
 
 - **Identificador:** LEGACY-ANALYSIS-001
-- **Estado global:** revisión correctiva en curso; Qalqalah corregida
+- **Estado global:** revisión correctiva en curso; Qalqalah y nūn/tanwīn corregidos
 - **Importancia:** crítica
 
 ## Cambio de método
 
 Este plan queda como registro histórico de la auditoría inicial. El trabajo activo continúa verticalmente, una sola regla cada vez: revisar, corregir, validar y sólo después elegir la siguiente.
 
-La primera regla, **Qalqalah**, ha sido corregida en [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md). La validación manual contra el muṣḥaf se realizará durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
+**Qalqalah** y **nūn/tanwīn** han sido corregidos en sus documentos migrados. La validación manual contra el muṣḥaf se realizará durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
 
 ## Regla principal
 
@@ -80,7 +80,7 @@ La implementación controlada puede comenzar en `development_ready`. Sólo `fina
 - `Fahrass.md` — `source_check`; aceptable sólo como índice provisional de navegación; pendiente de contrastar REL-001 con la edición impresa.
 - `ARBOL_COMPLETO_REGLAS_TAJWEED.md` — `rejected`; no puede migrarse como árbol completo, especificación, golden tests ni política Unicode. Se conserva únicamente para extraer afirmaciones que deberán volver a verificarse.
 - `DECISION_LOGIC_QALQALAH.md` — `corrected`; migrado y corregido contra las páginas 61–62; sus resultados se comprobarán manualmente durante la implementación.
-- `DECISION_LOGIC_NUUN_TANWEEN.md` — `rejected`; el núcleo clasificatorio coincide provisionalmente con la Parte 7, pero el algoritmo no controla waṣl/waqf de forma general, depende de signos Unicode no uniformes y contiene una rama especial inalcanzable.
+- `DECISION_LOGIC_NUUN_TANWEEN.md` — `corrected`; migrado y corregido contra las páginas 67–72, con waṣl/waqf, Unicode no destructivo, casos especiales alcanzables y mapeo negro/verde/gris.
 - `DECISION_LOGIC_MEEM_SAKINAH.md` — `rejected`; el núcleo coincide provisionalmente con las páginas 75–76, pero el algoritmo falla sobre las convenciones del propio corpus, clasifica mal una frontera de palabra e implementa una hipótesis que declara no documentada.
 - `DECISION_LOGIC_TAFKHIM_TARQIQ.md` — `rejected`; conserva un inventario amplio de la Parte 8, pero el orden de retornos vuelve inalcanzables múltiples awjuh y excepciones, y sus coincidencias Unicode/textuales no son seguras.
 - `DECISION_LOGIC_IDGHAM.md` — `rejected`; recupera pares citados en la Parte 9, pero convierte ejemplos en listas exclusivas, omite waṣl/waqf, no implementa idghām kabīr y extiende iẓhār fuera de su dominio.

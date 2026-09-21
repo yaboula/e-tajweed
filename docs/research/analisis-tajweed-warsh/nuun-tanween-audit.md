@@ -2,17 +2,17 @@
 
 - **Artefacto:** LEGACY-ANALYSIS-001 / `DECISION_LOGIC_NUUN_TANWEEN.md`
 - **SHA-256:** `d1f38e4c8629a8ddd65e007b5bbf2cc7ecafc5fdaac0f0d9742575efc791727e`
-- **Estado:** `rejected`
-- **Decisión:** rechazado como guía directa de implementación; las definiciones y divisiones respaldadas por REL-001 deberán reescribirse como especificación candidata.
+- **Estado:** `resolved`; correcciones aplicadas al documento migrado
+- **Decisión:** conservar el documento, corregirlo contra REL-001 y mantener separadas sus decisiones semánticas aunque compartan color.
 - **Fuente local contrastada:** REL-001 / `Parte 7.md`.
 
 ## Veredicto
 
-El documento conserva buena parte de la clasificación básica de nūn sākinah y tanwīn expuesta en el libro de trabajo. Sin embargo, su supuesto «algoritmo completo» no representa con seguridad ni el texto coránico ni el contexto de recitación.
+El documento conservaba buena parte de la clasificación básica de nūn sākinah y tanwīn expuesta en el libro de trabajo. Su antiguo «algoritmo completo» no representaba con seguridad el texto coránico ni el contexto de recitación; esos puntos se corrigieron en [DECISION_LOGIC_NUUN_TANWEEN.md](./DECISION_LOGIC_NUUN_TANWEEN.md).
 
-Hay defectos bloqueantes de control de flujo, waṣl/waqf, Unicode e integridad textual. En particular, una excepción de Warsh queda inalcanzable por el orden del propio árbol y el detector exige signos que el corpus heredado no utiliza de manera uniforme.
+La corrección incorpora waṣl/waqf, identidad basada en el corpus, incertidumbre, preservación del texto y los casos `يس`/`ن` antes de la rama general de wāw.
 
-La parte religiosa continúa pendiente de validación por un profesor, qāriʾ o especialista cualificado. Nada de este artefacto puede implementarse todavía como regla normativa.
+La validación manual se realizará durante el desarrollo contra el muṣḥaf coloreado y certificado. La revisión del profesor, qāriʾ o especialista cualificado queda como control final futuro y no bloquea el desarrollo.
 
 ## Elementos respaldados provisionalmente por REL-001
 
@@ -49,7 +49,7 @@ La pequeña mīm es una señal editorial posible, no la definición normativa de
 
 REL-001, líneas 107–127, respalda provisionalmente las quince letras de ikhfāʾ. También distingue una ghunnah más gruesa ante las cinco letras de istiʿlāʾ incluidas y una ghunnah fina ante las diez restantes. El documento heredado recoge esa división en sus líneas 220–260.
 
-## Hallazgos bloqueantes
+## Hallazgos corregidos
 
 ### NUN-001 — El detector exige signos literales que el corpus no garantiza
 
@@ -173,7 +173,7 @@ La correspondencia general con la Parte 7 es razonable, pero el documento cita r
 
 La futura especificación deberá enlazar cada condición, excepción y resultado con página exacta, edición, fragmento identificado y estado de aprobación. Una referencia general a `Parte 7` no basta.
 
-## Modelo mínimo que deberá reemplazarlo
+## Modelo mínimo aplicado en la corrección
 
 La futura especificación candidata deberá separar:
 
@@ -193,7 +193,7 @@ unidad coránica inmutable
 
 La realización fonética no sustituirá caracteres. La pequeña mīm, el sukūn y la shaddah serán señales del corpus identificado, no atajos universales.
 
-## Casos que la nueva especificación deberá incluir
+## Casos preparados para la validación durante la implementación
 
 - Positivos y negativos para las seis letras de iẓhār.
 - Positivos y negativos para cada grupo de idghām.
@@ -212,12 +212,13 @@ La realización fonética no sustituirá caracteres. La pequeña mīm, el sukūn
 
 ## Decisión de migración
 
-- Conservar el archivo original como legado.
-- No migrar su árbol ni su pseudocódigo al motor.
+- Conservar una copia privada intacta como custodia histórica.
+- Migrar el archivo con su nombre original y corregir en él el árbol y el pseudocódigo.
 - No utilizar sus etiquetas de completitud como evidencia.
-- Recuperar sólo los enunciados respaldados por REL-001 y volver a redactarlos.
+- Conservar los enunciados respaldados por REL-001 y comentar cada corrección.
 - Tratar los signos Unicode como propiedades de corpus versionados.
-- Mantener toda conclusión religiosa como candidata hasta la revisión del especialista.
+- Mapear iẓhār a negro, idghām con ghunnah/iqlāb/ikhfāʾ a verde e idghām sin ghunnah a gris, sin perder la identidad de cada decisión.
+- Validar manualmente durante el desarrollo y reservar al especialista para el control final.
 
 ## Próximo documento
 

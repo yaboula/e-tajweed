@@ -84,12 +84,13 @@ Documento corregido: [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md).
 
 ### `DECISION_LOGIC_NUUN_TANWEEN.md`
 
-- **Estado:** `rejected`.
-- **Puede recuperarse:** clasificación básica, grupos de letras y casos citados en la Parte 7.
-- **Debe crearse de nuevo:** modelo de nūn/tanwīn, fronteras, waṣl/waqf, naql y precedencias.
-- **Razón principal:** depende de signos que el corpus no usa uniformemente y contiene una rama especial inalcanzable.
+- **Estado:** `corrected`.
+- **Acción realizada:** migrado con su nombre original y corregido contra las páginas 67–72.
+- **Correcciones principales:** waṣl/waqf explícito, casos `يس`/`ن` alcanzables, Unicode no destructivo, incertidumbre y separación entre decisiones que comparten verde.
+- **Coloración:** iẓhār negro; idghām con ghunnah, iqlāb e ikhfāʾ verdes; idghām sin ghunnah gris.
 
 Informe: [nuun-tanween-audit.md](./nuun-tanween-audit.md).
+Documento corregido: [DECISION_LOGIC_NUUN_TANWEEN.md](./DECISION_LOGIC_NUUN_TANWEEN.md).
 
 ### `DECISION_LOGIC_MEEM_SAKINAH.md`
 
@@ -216,12 +217,12 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah está corregida en [DECISION_LOGIC_QALQALAH.md](./DECISION_LOGIC_QALQALAH.md). La validación manual de sus resultados se realizará durante la implementación, por lo que la siguiente sesión puede continuar con nūn/tanwīn.
+El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah y nūn/tanwīn están corregidos. La validación manual de sus resultados se realizará durante la implementación, por lo que la siguiente sesión puede continuar con mīm sākinah.
 
 Orden recomendado:
 
-1. Mantener Qalqalah como documento corregido contra el libro.
-2. Revisar y corregir `DECISION_LOGIC_NUUN_TANWEEN.md` como próximo documento, sin abrir otros a la vez.
+1. Mantener Qalqalah y nūn/tanwīn como documentos corregidos contra el libro.
+2. Revisar y corregir `DECISION_LOGIC_MEEM_SAKINAH.md` como próximo documento, sin abrir otros a la vez.
 3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
 
 La revisión del especialista se conserva como control final de la aplicación y no como bloqueo de la revisión documental ni del desarrollo.
