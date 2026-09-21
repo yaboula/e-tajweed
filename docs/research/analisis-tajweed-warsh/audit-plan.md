@@ -1,14 +1,14 @@
 # Plan de auditoría de `analisis_tajweed_warsh`
 
 - **Identificador:** LEGACY-ANALYSIS-001
-- **Estado global:** revisión correctiva en curso; Qalqalah, nūn/tanwīn, mīm sākinah y tafkhīm/tarqīq corregidos
+- **Estado global:** revisión correctiva en curso; Qalqalah, nūn/tanwīn, mīm sākinah, tafkhīm/tarqīq e idghām corregidos
 - **Importancia:** crítica
 
 ## Cambio de método
 
 Este plan queda como registro histórico de la auditoría inicial. El trabajo activo continúa verticalmente, una sola regla cada vez: revisar, corregir, validar y sólo después elegir la siguiente.
 
-**Qalqalah**, **nūn/tanwīn**, **mīm sākinah** y **tafkhīm/tarqīq** han sido corregidos en sus documentos migrados. La validación manual contra el muṣḥaf se realizará durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
+**Qalqalah**, **nūn/tanwīn**, **mīm sākinah**, **tafkhīm/tarqīq** e **idghām** han sido corregidos en sus documentos migrados. La validación manual contra el muṣḥaf se realizará durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
 
 ## Regla principal
 
@@ -83,7 +83,7 @@ La implementación controlada puede comenzar en `development_ready`. Sólo `fina
 - `DECISION_LOGIC_NUUN_TANWEEN.md` — `corrected`; migrado y corregido contra las páginas 67–72, con waṣl/waqf, Unicode no destructivo, casos especiales alcanzables y mapeo negro/verde/gris.
 - `DECISION_LOGIC_MEEM_SAKINAH.md` — `corrected`; migrado y corregido contra las páginas 75–76, con identidad dependiente del corpus, frontera y waṣl/waqf explícitos, Unicode no destructivo, incertidumbre para el caso interno y mapeo verde/negro.
 - `DECISION_LOGIC_TAFKHIM_TARQIQ.md` — `corrected`; migrado y corregido contra las páginas 79–88, con awjuh prioritarios, perfiles correlacionados, waṣl/waqf, Unicode no destructivo, ocurrencias explícitas y mapeo azul oscuro/negro.
-- `DECISION_LOGIC_IDGHAM.md` — `rejected`; recupera pares citados en la Parte 9, pero convierte ejemplos en listas exclusivas, omite waṣl/waqf, no implementa idghām kabīr y extiende iẓhār fuera de su dominio.
+- `DECISION_LOGIC_IDGHAM.md` — `corrected`; migrado y corregido contra las páginas 91–94, con idghām kabīr/ṣaghīr separados, pares transmitidos, waṣl/waqf, morfología explícita, awjuh no destructivos, lām al-taʿrīf validada y mapeo gris/negro/verde.
 - `DECISION_LOGIC_FATH_IMALAH.md` — `rejected`; conserva numerosas categorías de la Parte 10, pero evalúa excepciones e iltiqāʾ al-sākinayn después de retornos definitivos y depende de análisis contextuales no definidos.
 - `DECISION_LOGIC_MUDUD.md` — `rejected`; inventaría muchas categorías de la Parte 11, pero su algoritmo borra excepciones y awjuh, deja layn sin resolución y aplica prioridad a palabras en vez de spans concretos.
 - `DECISION_LOGIC_HAMZ.md` — `rejected`; conserva un catálogo amplio de las Partes 12-A/12-B, pero contiene ramas inalcanzables, pierde awjuh correlacionados y depende de una sección de fuente con correcciones editoriales no resueltas.

@@ -1,18 +1,18 @@
 # Auditoría de `DECISION_LOGIC_IDGHAM.md`
 
 - **Artefacto:** LEGACY-ANALYSIS-001 / `DECISION_LOGIC_IDGHAM.md`
-- **SHA-256:** `53bd499c5d4e45fe4bc19723751376f08b075bbd88b3b94eab9e745f44f0f055`
-- **Estado:** `rejected`
-- **Decisión:** rechazado como guía directa de implementación; las listas respaldadas por REL-001 deberán convertirse en reglas candidatas de alcance explícito.
+- **SHA-256 del original antes de editar:** `53bd499c5d4e45fe4bc19723751376f08b075bbd88b3b94eab9e745f44f0f055`
+- **Estado:** `corrected`
+- **Decisión:** migrado con el mismo nombre y corregido en el propio documento contra REL-001, páginas 91–94.
 - **Fuente local contrastada:** REL-001 / `parte9 .md`.
 
 ## Veredicto
 
-El documento reproduce gran parte de la clasificación y de los pares concretos expuestos en la Parte 9. Sin embargo, presenta como exhaustivos varios ejemplos que la fuente introduce sólo con `مثل`, omite el modo waṣl/waqf, no implementa realmente idghām kabīr y usa un clasificador general que invade otras reglas de tajwīd.
+El original reproducía gran parte de la clasificación y de los pares concretos expuestos en la Parte 9. Sin embargo, presentaba como exhaustivos ejemplos introducidos con `مثل`, omitía waṣl/waqf, no implementaba idghām kabīr y usaba un clasificador general que invadía otras reglas. Esos defectos quedaron corregidos en `DECISION_LOGIC_IDGHAM.md`.
 
-La identificación de lām al-taʿrīf tampoco es segura: observar una lām y la letra siguiente no demuestra que se trate del artículo definido. Las comparaciones de letras no resuelven hamzah/alif, marcas combinantes ni convenciones distintas de rasm.
+La identificación de lām al-taʿrīf ahora exige confirmar el artículo definido antes de aplicar las listas. Las comparaciones se trasladan a identidades lingüísticas derivadas de grafemas, sin normalizar destructivamente hamzah/alif ni las convenciones de rasm.
 
-La parte religiosa continúa pendiente de validación por un profesor, qāriʾ o especialista cualificado. Las listas son candidatas respaldadas por REL-001, no reglas aprobadas.
+Durante la implementación, el propietario validará manualmente los resultados contra el muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq. La revisión por un profesor, qāriʾ o especialista cualificado se conserva como control final cuando esté disponible.
 
 ## Elementos respaldados provisionalmente por REL-001
 
@@ -45,7 +45,9 @@ REL-001, líneas 92–103, añade al capítulo la división qamariyyah/shamsiyya
 
 La regla presupone que la lām ya ha sido identificada como lām del artículo definido. Esa precondición falta en el algoritmo heredado.
 
-## Hallazgos bloqueantes
+## Hallazgos corregidos
+
+Los códigos siguientes conservan el diagnóstico histórico del original identificado por el hash anterior. Su resolución está aplicada y explicada mediante comentarios visibles en el documento corregido.
 
 ### IDG-001 — Dos ejemplos de idghām kabīr se convierten en una lista exclusiva
 
@@ -182,9 +184,9 @@ Las líneas 455 y 480 usan etiquetas de completitud que REL-001 no demuestra. El
 
 No se declarará completitud hasta contrastar fuentes autorizadas, todas las ocurrencias del corpus y la revisión del especialista.
 
-## Modelo mínimo que deberá reemplazarlo
+## Modelo mínimo aplicado
 
-La futura especificación candidata deberá separar:
+El documento corregido separa:
 
 ```text
 texto coránico inmutable + token/ocurrencia
@@ -203,7 +205,7 @@ texto coránico inmutable + token/ocurrencia
 
 Los pares enumerados tendrán prioridad explícita. La falta de coincidencia en este módulo devolverá `not_applicable`, no iẓhār global.
 
-## Casos que la nueva especificación deberá incluir
+## Casos para la implementación y las pruebas
 
 - Cada ejemplo de mutamāthilayn de REL-001, con caso negativo comparable.
 - Nūn+nūn y mīm+mīm para comprobar la precedencia de reglas especializadas.
@@ -223,13 +225,15 @@ Los pares enumerados tendrán prioridad explícita. La falta de coincidencia en 
 
 ## Decisión de migración
 
-- Conservar el archivo original como legado.
-- No migrar sus algoritmos genéricos ni sus fallbacks de iẓhār.
-- Recuperar los pares y ejemplos respaldados como candidatos individuales.
-- No tratar los dos ejemplos de idghām kabīr como lista exhaustiva.
-- Separar lām al-taʿrīf en una especificación con precondición morfológica propia.
-- Representar los awjuh de qāf → kāf sin modificar el texto.
-- Mantener toda conclusión religiosa como candidata hasta revisión del especialista.
+- El original permanece intacto en la fuente y en la custodia histórica.
+- Se copió el archivo con el mismo nombre y se verificó su SHA-256 antes de editarlo.
+- Se corrigieron tablas, árboles y algoritmos en esa copia, dejando comentarios explicativos.
+- Los pares transmitidos sustituyen la inferencia automática por proximidad fonética.
+- Los ejemplos de idghām kabīr no se tratan como lista exhaustiva.
+- Lām al-taʿrīf tiene una precondición morfológica propia.
+- Los awjuh de qāf→kāf se conservan sin modificar el texto.
+- Idghām general y lām shamsiyyah usan gris `#A9A9A9`; los iẓhār explícitos usan negro `#000000`; nūn/mīm con ghunnah, incluidos los casos citados de kabīr, usan verde `#006400`.
+- La validación manual corresponde al desarrollo; la aprobación definitiva conserva la revisión final del especialista.
 
 ## Próximo documento
 
