@@ -74,7 +74,7 @@ Ningún estado anterior a `approved` permite implementar la lógica como normati
 - `DECISION_LOGIC_NUUN_TANWEEN.md` — `rejected`; el núcleo clasificatorio coincide provisionalmente con la Parte 7, pero el algoritmo no controla waṣl/waqf de forma general, depende de signos Unicode no uniformes y contiene una rama especial inalcanzable.
 - `DECISION_LOGIC_MEEM_SAKINAH.md` — `rejected`; el núcleo coincide provisionalmente con las páginas 75–76, pero el algoritmo falla sobre las convenciones del propio corpus, clasifica mal una frontera de palabra e implementa una hipótesis que declara no documentada.
 - `DECISION_LOGIC_TAFKHIM_TARQIQ.md` — `rejected`; conserva un inventario amplio de la Parte 8, pero el orden de retornos vuelve inalcanzables múltiples awjuh y excepciones, y sus coincidencias Unicode/textuales no son seguras.
-- `DECISION_LOGIC_IDGHAM.md` — `unreviewed`; referencia declarada: Parte 9, páginas 91-94.
+- `DECISION_LOGIC_IDGHAM.md` — `rejected`; recupera pares citados en la Parte 9, pero convierte ejemplos en listas exclusivas, omite waṣl/waqf, no implementa idghām kabīr y extiende iẓhār fuera de su dominio.
 - `DECISION_LOGIC_FATH_IMALAH.md` — `unreviewed`; referencia declarada: Parte 10.
 - `DECISION_LOGIC_MUDUD.md` — `unreviewed`; referencia declarada: Parte 11.
 - `DECISION_LOGIC_HAMZ.md` — `unreviewed`; referencias declaradas: Partes 12-A y 12-B, páginas 117-154.
