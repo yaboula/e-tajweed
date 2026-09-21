@@ -1,0 +1,73 @@
+{
+  "id": "LEGACY-ANALYSIS-001",
+  "title": "analisis_tajweed_warsh legacy working analysis",
+  "classification": "derived-knowledge-migrated-for-audit",
+  "source_location": "Mesa de Trabajo3/analisis_tajweed_warsh",
+  "custody_location": "resources/sources/private/LEGACY-ANALYSIS-001/analisis_tajweed_warsh",
+  "migrated_at": "2026-09-21",
+  "content_tracked_in_git": false,
+  "distribution_status": "pending-rights-and-content-review",
+  "validation_status": "byte-identical-copy; religious-and-technical-content-unapproved",
+  "hash_algorithm": "SHA-256",
+  "tree_hash_algorithm": "SHA-256 of UTF-8 records ordered by relative path; each record is path, file SHA-256 and byte length separated by LF",
+  "tree_sha256": "e272d53d40834884388ad8d16369462161445a7fc5e769ea64a7595026329a81",
+  "file_count": 11,
+  "total_bytes": 231478,
+  "files": [
+    {
+      "path": "ARBOL_COMPLETO_REGLAS_TAJWEED.md",
+      "bytes": 25113,
+      "sha256": "9fbdc5d22c6841fd26aea92686702d4506ae4975c140d3e6cfe8db8e03e41be1"
+    },
+    {
+      "path": "DECISION_LOGIC_FATH_IMALAH.md",
+      "bytes": 25607,
+      "sha256": "95ecb58ffc913d675061b7dda49044cefb30e90b4c1ddc6c2585ac5a38e24829"
+    },
+    {
+      "path": "DECISION_LOGIC_HAMZ.md",
+      "bytes": 36679,
+      "sha256": "17455eb4161e488c36ab9d8d08fd0caa37e337dbc70f438b908e5dfe8d3c8c02"
+    },
+    {
+      "path": "DECISION_LOGIC_IDGHAM.md",
+      "bytes": 20807,
+      "sha256": "53bd499c5d4e45fe4bc19723751376f08b075bbd88b3b94eab9e745f44f0f055"
+    },
+    {
+      "path": "DECISION_LOGIC_MEEM_SAKINAH.md",
+      "bytes": 17982,
+      "sha256": "3de93a57b05db1c56bf0e35233a96de8f82f3e1361de4ccdf17efb75f8f26e67"
+    },
+    {
+      "path": "DECISION_LOGIC_MUDUD.md",
+      "bytes": 28602,
+      "sha256": "a0949ddd6474e3593bdb6fc70a634a5f497465d37ff440ec4c248002e5cecaa9"
+    },
+    {
+      "path": "DECISION_LOGIC_NUUN_TANWEEN.md",
+      "bytes": 19173,
+      "sha256": "d1f38e4c8629a8ddd65e007b5bbf2cc7ecafc5fdaac0f0d9742575efc791727e"
+    },
+    {
+      "path": "DECISION_LOGIC_QALQALAH.md",
+      "bytes": 10260,
+      "sha256": "76410c10d1a3c21f249a49eeb4e1b00686700c69619eaa0b7ddb33c950b05537"
+    },
+    {
+      "path": "DECISION_LOGIC_TAFKHIM_TARQIQ.md",
+      "bytes": 31656,
+      "sha256": "4c28f82edce393a405cf8c6d5f02a18d18870be04eee0eaecb6d40b08c9facf1"
+    },
+    {
+      "path": "Fahrass.md",
+      "bytes": 5163,
+      "sha256": "404e6b7e494a7075d247f119c18e47a1ab5e06f9ce7db061257203b30328416f"
+    },
+    {
+      "path": "PALETA_COLORES_WARSH.md",
+      "bytes": 10436,
+      "sha256": "ae3f00b1481c7bd53f2f6ce4fe32fa3972df8d25047323871d538cac892ff1c9"
+    }
+  ]
+}

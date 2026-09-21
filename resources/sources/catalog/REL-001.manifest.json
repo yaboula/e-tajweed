@@ -1,0 +1,88 @@
+{
+  "id": "REL-001",
+  "title": "Mudhakkirah fi ahkam al-tajwid bi-riwayat Warsh an Nafi min tariq al-Azraq — working Markdown source",
+  "classification": "primary-working-source-preserved-verbatim",
+  "source_location": "Mesa de Trabajo3/docs/libro",
+  "custody_location": "resources/sources/private/REL-001/libro",
+  "migrated_at": "2026-09-21",
+  "content_tracked_in_git": false,
+  "distribution_status": "pending-rights-review",
+  "validation_status": "byte-identical-copy; textual-fidelity-to-printed-edition-not-yet-validated",
+  "hash_algorithm": "SHA-256",
+  "tree_hash_algorithm": "SHA-256 of UTF-8 records ordered by relative path; each record is path, file SHA-256 and byte length separated by LF",
+  "tree_sha256": "5c0a5003126b76056430535faec8b0300045b7849db7369be8406e9870d172b2",
+  "file_count": 14,
+  "total_bytes": 232641,
+  "files": [
+    {
+      "path": "El Lah'n (Errores) y Niveles de Lectura (Páginas 31-38).md",
+      "bytes": 7961,
+      "sha256": "70aab3e0671652d737d919c969847fb15b3fc4d4519d96a9bfede5d7fea58296"
+    },
+    {
+      "path": "parte 11.md",
+      "bytes": 16060,
+      "sha256": "80e1a904a39101e556c55b73ef3e63849c74e4464bc41e7de3011928e3dc5841"
+    },
+    {
+      "path": "parte 13.md",
+      "bytes": 20837,
+      "sha256": "5427b79641d14f2d0b7aabd192533736f605d35aef3a0c858b94efbe9d69d761"
+    },
+    {
+      "path": "Parte 2 Introducción a la Ciencia del Taywid (Páginas 17-30)..md",
+      "bytes": 21411,
+      "sha256": "b1069080e65739642a632c9d7e96819af299dc39d0f187627f2517789781fd36"
+    },
+    {
+      "path": "Parte 4 Isti'aadha y Basmalah (Páginas 39-48)..md",
+      "bytes": 16695,
+      "sha256": "01cb819d3c2bbc358c328ba51c552ebc33e8ea25bef78880f8049215633e6bdf"
+    },
+    {
+      "path": "Parte 5 Makharij al-Huruf (Puntos de Articulación) (Páginas 49-55)..md",
+      "bytes": 9392,
+      "sha256": "b36e62f066b33e82cf55488d5fbd21119ba13d734f0e37f13eaf779517138955"
+    },
+    {
+      "path": "Parte 6 Cualidades de las Letras (Sifat al-Huruf) (Páginas 56-64)..md",
+      "bytes": 12248,
+      "sha256": "7097a28ab27f5a0d3fc6aeacf269aa27c630af085416f9bcbe91e5f2067f2d9f"
+    },
+    {
+      "path": "Parte 7.md",
+      "bytes": 11645,
+      "sha256": "d40d41b52b03bf7fd36cc4a167507b9b1229ef5e434ac92b5a789a3787c8f98c"
+    },
+    {
+      "path": "parte 8.md",
+      "bytes": 17621,
+      "sha256": "2bc247a3425f51a9e2fae92b7df482227bec7853af196fa51a13f4756dd9aa96"
+    },
+    {
+      "path": "parte1-Introduction y biografia.md",
+      "bytes": 21547,
+      "sha256": "cb21dea42bea1466a8a7dd48903ff8df52f678c4b3d009bc74be427e8e1f6b2d"
+    },
+    {
+      "path": "parte10.md",
+      "bytes": 8417,
+      "sha256": "92013af1ecd3fc31cff95c70cb7979aae6a7603c9cb474fa0b14968a6643d6cd"
+    },
+    {
+      "path": "parte12-A.md",
+      "bytes": 32631,
+      "sha256": "6eb34de61fb07ae5578709e2912366ae86d810fa9ea5449c2377bb08ee7b68fd"
+    },
+    {
+      "path": "parte12-B.md",
+      "bytes": 29518,
+      "sha256": "e33a8a9a3d80ea6d8e9d3817fef78bc399bb1d4925fb50b235e302e227d943d9"
+    },
+    {
+      "path": "parte9 .md",
+      "bytes": 6658,
+      "sha256": "cccc15da1c8dca653950afcc6a8d14b5f12c495b2416417da53d2548dd28b583"
+    }
+  ]
+}
