@@ -4,6 +4,12 @@
 - **Estado global:** auditoría heredada completada; bloqueado para implementación normativa
 - **Importancia:** crítica
 
+## Cambio de método
+
+Este plan queda como registro histórico de la auditoría inicial. El trabajo activo continúa verticalmente, una sola regla cada vez: revisar, corregir, validar y sólo después elegir la siguiente.
+
+La regla activa es **Qalqalah**. Su versión corregida está en [qalqalah.md](../rules/qalqalah.md). No se continuará con nūn/tanwīn hasta cerrar la revisión pendiente de Qalqalah.
+
 ## Regla principal
 
 Los documentos heredados son hipótesis de trabajo. No son especificaciones aprobadas y no pueden alimentar el motor, los colores ni los golden tests hasta superar todos los controles de este plan.

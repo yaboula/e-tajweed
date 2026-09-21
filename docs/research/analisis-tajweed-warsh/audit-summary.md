@@ -212,16 +212,15 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-La siguiente fase segura es **verificación y registro de fuentes**, no desarrollo de la aplicación ni del motor.
+El trabajo continuará **verticalmente, una sola regla cada vez**. La regla activa es Qalqalah y su especificación candidata está en [qalqalah.md](../rules/qalqalah.md). No se abrirá la revisión de nūn/tanwīn ni de otra regla hasta cerrar ésta.
 
 Orden recomendado:
 
-1. Identificar y verificar físicamente REL-001, empezando por Parte 12-B.
-2. Fijar corpus y muṣḥaf de referencia con licencia y hashes.
-3. Confirmar el perfil exacto de riwāyah/ṭarīq/método.
-4. Nombrar al especialista responsable de aprobación.
-5. Elegir una primera regla pequeña y volver a especificarla desde fuentes.
-6. Crear casos candidatos y obtener aprobación humana.
-7. Sólo entonces diseñar el contrato del motor alrededor de una regla aprobada.
+1. Verificar físicamente las páginas 61–62 de REL-001.
+2. Contrastar las decisiones y preguntas abiertas con autoridades de Warsh por ṭarīq al-Azraq.
+3. Seleccionar casos desde un corpus y un muṣḥaf de referencia autorizados.
+4. Obtener la revisión del especialista cualificado.
+5. Aprobar los casos positivos, negativos, de waṣl, waqf e incertidumbre.
+6. Sólo entonces promover Qalqalah a conocimiento normativo y elegir la regla siguiente.
 
-Hasta completar esos controles, el resultado correcto del proyecto es **decisión documentada, fuentes preservadas y cero lógica religiosa implementada**.
+Hasta completar esos controles para Qalqalah, su resultado correcto es **especificación candidata, fuentes preservadas y cero lógica religiosa normativa implementada**.
