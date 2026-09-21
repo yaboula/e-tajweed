@@ -1,18 +1,18 @@
 # Auditoría de `DECISION_LOGIC_MEEM_SAKINAH.md`
 
 - **Artefacto:** LEGACY-ANALYSIS-001 / `DECISION_LOGIC_MEEM_SAKINAH.md`
-- **SHA-256:** `3de93a57b05db1c56bf0e35233a96de8f82f3e1361de4ccdf17efb75f8f26e67`
-- **Estado:** `rejected`
-- **Decisión:** rechazado como guía directa de implementación; el núcleo respaldado por REL-001 deberá reescribirse como especificación candidata.
+- **SHA-256 del original antes de editar:** `3de93a57b05db1c56bf0e35233a96de8f82f3e1361de4ccdf17efb75f8f26e67`
+- **Estado:** `corrected`
+- **Decisión:** migrado con el mismo nombre y corregido en el propio documento contra REL-001, páginas 75–76.
 - **Fuente local contrastada:** REL-001 / `Parte 7.md`.
 
 ## Veredicto
 
-El documento reproduce las tres categorías presentadas en la Parte 7 y conserva la advertencia específica de iẓhār ante fāʾ y wāw. Sin embargo, añade relaciones posicionales, transformaciones y ramas algorítmicas que la fuente no demuestra.
+El documento reproducía las tres categorías presentadas en la Parte 7 y conservaba la advertencia específica de iẓhār ante fāʾ y wāw, pero añadía relaciones posicionales, transformaciones y ramas algorítmicas que la fuente no demuestra. Esos puntos quedaron corregidos en `DECISION_LOGIC_MEEM_SAKINAH.md`.
 
-El detector tampoco funciona sobre el propio corpus heredado: exige una mīm seguida de U+0652, mientras que ejemplos de ikhfāʾ e idghām del corpus omiten ese sukūn visual. Además, clasifica como caso de una sola palabra una secuencia que contiene una frontera de palabra visible.
+La lógica heredada tampoco funcionaba sobre el propio corpus: exigía una mīm seguida de U+0652, aunque ejemplos de ikhfāʾ e idghām omiten ese sukūn visual. Además, clasificaba como caso de una sola palabra una secuencia con frontera visible. La corrección usa identidad confirmada por el corpus, frontera explícita y análisis por grafemas.
 
-La parte religiosa continúa pendiente de validación por un profesor, qāriʾ o especialista cualificado. El archivo no puede alimentar el motor, los golden tests ni una política Unicode.
+Durante la implementación, el propietario validará manualmente los resultados contra un muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq. La revisión por un profesor, qāriʾ o especialista cualificado se mantiene como control final cuando esté disponible.
 
 ## Elementos respaldados provisionalmente por REL-001
 
@@ -40,7 +40,9 @@ REL-001, líneas 160–171, define iẓhār ante las letras restantes y pide esp
 
 La advertencia es una instrucción de pronunciación dentro de iẓhār; no constituye una cuarta regla ni una excepción que cambie la clasificación.
 
-## Hallazgos bloqueantes
+## Hallazgos corregidos
+
+Los códigos siguientes conservan el diagnóstico histórico del original identificado por el hash anterior. Su resolución está aplicada y explicada mediante comentarios visibles en el documento corregido.
 
 ### MEM-001 — El requisito de U+0652 contradice el corpus heredado
 
@@ -158,9 +160,9 @@ Las citas de las páginas 75–76 coinciden de forma general con REL-001, línea
 
 Cada futura condición deberá llevar su propia evidencia; una cita correcta de la definición no valida el pseudocódigo añadido alrededor de ella.
 
-## Modelo mínimo que deberá reemplazarlo
+## Modelo mínimo aplicado
 
-La futura especificación candidata deberá separar:
+El documento corregido separa:
 
 ```text
 texto coránico inmutable
@@ -178,7 +180,7 @@ texto coránico inmutable
 
 La advertencia ante fāʾ y wāw no alterará la clase de iẓhār. Las relaciones explicativas con iqlāb no producirán automáticamente dos anotaciones normativas.
 
-## Casos que la nueva especificación deberá incluir
+## Casos para la implementación y las pruebas
 
 - Ikhfāʾ ante bāʾ con sukūn visible.
 - Ikhfāʾ ante bāʾ sin U+0652, como `تَرْمِيهِم بِحِجَارَةٍ` en el corpus heredado.
@@ -195,13 +197,15 @@ La advertencia ante fāʾ y wāw no alterará la clase de iẓhār. Las relacion
 
 ## Decisión de migración
 
-- Conservar el archivo original como legado.
-- No migrar su árbol, pseudocódigo ni funciones auxiliares.
-- Rechazar la etiqueta errónea de “una palabra” del ejemplo de Al-Fīl.
-- No implementar la hipótesis interna de `مْ + م`.
-- Recuperar sólo las definiciones respaldadas y volver a redactarlas.
-- Tratar sukūn, shaddah y pequeña mīm como señales de un corpus versionado.
-- Mantener toda conclusión religiosa como candidata hasta revisión del especialista.
+- El original permanece intacto en la fuente y en la custodia histórica.
+- Se copió el archivo con el mismo nombre y se verificó el SHA-256 antes de editarlo.
+- Se corrigieron en esa copia el árbol, el pseudocódigo y las tablas, dejando comentarios de explicación.
+- La etiqueta errónea de “una palabra” del ejemplo de Al-Fīl quedó corregida.
+- `مْ + م` dentro de palabra devuelve `requires_review`; no ejecuta una hipótesis.
+- Sukūn, shaddah y pequeña mīm se tratan como señales de un corpus versionado.
+- Ikhfāʾ e idghām se colorean en verde `#006400`; iẓhār, en negro `#000000`.
+- Iqlāb conserva su propia decisión y no genera una segunda anotación de ikhfāʾ shafawī.
+- La validación manual corresponde al desarrollo; la aprobación definitiva conserva la revisión final del especialista.
 
 ## Próximo documento
 
