@@ -1,168 +1,328 @@
-# Lógica de decisión: القلقلة (Qalqalah)
+# LÓGICA DE DECISIÓN: القلقلة (Qalqalah)
+## Diagrama de Condiciones, Excepciones e Intersecciones
 
-- **Documento migrado:** `analisis_tajweed_warsh/DECISION_LOGIC_QALQALAH.md`
-- **Estado:** corregido contra el libro
-- **Fuente contrastada:** REL-001, Parte 6, páginas 61–62
-- **Lectura objetivo:** Warsh ʿan Nāfiʿ por ṭarīq al-Azraq
-- **Versión del documento:** 2.0.0
+> **Comentario de revisión e-tajweed (2026-09-21):** este archivo fue copiado íntegramente desde `Mesa de Trabajo3/analisis_tajweed_warsh/DECISION_LOGIC_QALQALAH.md` y se verificó la copia antes de editarla (`SHA-256 76410c10d1a3c21f249a49eeb4e1b00686700c69619eaa0b7ddb33c950b05537`). Después se corrigió en este mismo archivo. Cada cambio aparece acompañado de su explicación. La validación visual se realizará durante el desarrollo contra el muṣḥaf coloreado y certificado de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq; la revisión del especialista queda como control final de la aplicación.
 
-Este es el documento heredado corregido. Conserva la regla útil del análisis anterior, elimina sus inferencias técnicas inseguras y registra lo que deberá verificarse manualmente durante el desarrollo contra el muṣḥaf certificado de referencia.
+---
 
-La revisión final por un profesor, qāriʾ o especialista cualificado se realizará antes de considerar definitiva la aplicación. No bloquea la revisión, implementación y comprobación manual durante el desarrollo.
+## 📋 DEFINICIONES TÉCNICAS
 
-## Definición y fuente
+### القلقلة (Qalqalah):
+- **Definición lingüística (p.61):** "التحرك والاضطراب" - Movimiento y agitación
+- **Definición técnica (p.61):** "هي اضطراب المخرج عند النطق بالحرف الساكن حتى يسمع له نبرة قوية"
+- **Significado:** Vibración del punto de articulación al pronunciar una letra sakinah hasta que se escuche una pulsación fuerte
+- **Característica:** Es una صفة قوة (cualidad de fuerza)
 
-### Definición
+> **Comentario de revisión e-tajweed:** se corrige `p.62` a `p.61`. En REL-001 la definición, las letras y la causa aparecen en la página 61; la clasificación y los grados continúan en la página 62.
 
-- **Lingüística:** movimiento y agitación.
-- **Técnica:** perturbación del punto de articulación al pronunciar una letra sākinah hasta que se perciba una pulsación fuerte.
-- **Causa indicada por el libro:** reunión de shiddah y jahr.
-- **Letras:** `ق ط ب ج د`, reunidas en `قطب جد`.
-- **Condición necesaria:** la letra debe estar sākinah.
+### Causa de la Qalqalah:
+**Razón técnica (p.61):** اجتماع صفة الشدة مع صفة الجهر في الحرف
+- **الشدة (Shiddah):** Impide el flujo del sonido
+- **الجهر (Jahr):** Impide el flujo de la respiración
+- **Resultado:** La letra solo puede pronunciarse con esta vibración/pulsación
 
-La definición, la causa y las letras aparecen en la página 61. La división y los grados continúan en la página 62. La versión anterior atribuía todo a la página 62 y queda corregida aquí.
+### حروف القلقلة (Letras de Qalqalah):
+**5 letras:** مجموعة في قوله: **قطب جد**
 
-## Clasificación recogida en REL-001
+> **Comentario de revisión e-tajweed:** las frecuencias siguientes se conservan como dato heredado, pero no están verificadas contra un corpus identificado y versionado. No se utilizarán para detectar qalqalah.
 
-### Qalqalah ṣughrā
+| Letra | Nombre | Unicode | Frecuencia heredada no validada |
+|-------|--------|---------|---------------------|
+| ق | Qāf | U+0642 | 7034 veces |
+| ط | Ṭā' | U+0637 | 1273 veces |
+| ب | Bā' | U+0628 | 11485 veces |
+| ج | Jīm | U+062C | 3317 veces |
+| د | Dāl | U+062F | 5992 veces |
 
-El libro la presenta cuando la letra de qalqalah está sākinah dentro de la palabra.
+**Mnemónico:** قطب جد (Quṭb Jadd)
 
-Ejemplos del libro:
+**⚠️ CONDICIÓN OBLIGATORIA:** La letra DEBE estar ساكنة (sakinah) para aplicar Qalqalah
 
-- `أطعمه`
-- `أفتطمعون`
-- `يجعلون`
-- `يبكون`
-- `يدخلون`
+---
 
-### Qalqalah kubrā
+## 🎯 CLASIFICACIÓN DE القلقلة
 
-El libro la presenta cuando la letra está sākinah al final de la palabra.
+```mermaid
+flowchart TD
+    Start["القلقلة"] --> Types{"Clasificación por<br/>posición"}
 
-Ejemplos del libro:
+    Types -->|"Letra en medio"| Sughra["القلقلة الصغرى<br/>(Qalqalah Menor)"]
+    Types -->|"Letra al final + وقف"| Kubra["القلقلة الكبرى<br/>(Qalqalah Mayor)"]
+    Types -->|"Letra al final + وصل"| Pending["Pendiente de<br/>comprobación manual"]
 
-- `الفلق`
-- `لهب`
-- `أحد`
-- `الصمد`
+    Sughra --> SughraDesc["Letra ساكنة en MEDIO de palabra<br/>Rebote SUAVE"]
+    SughraDesc --> SughraEx["Ejemplos:<br/>أَطْعَمَهُ, أَفَتَطْمَعُونَ<br/>يَجْعَلُونَ, يَبْكُونَ, يَدْخُلُونَ"]
 
-### Grados
+    Kubra --> KubraDesc["Letra ساكنة en FINAL de palabra<br/>Rebote FUERTE"]
+    KubraDesc --> KubraEx["Ejemplos:<br/>الْفَلَقْ, لَهَبْ<br/>أَحَدْ, الصَّمَدْ"]
 
-1. **Más fuerte:** al detenerse sobre una letra de qalqalah con shaddah, como la qāf de `بالحقّ`.
-2. **Intermedio:** al detenerse sobre una letra de qalqalah sin shaddah, como la ṭāʾ de `محيط`.
-3. **Menor:** letra de qalqalah sākinah dentro de la palabra.
-
-## Datos necesarios para decidir
-
-La decisión no se hará sobre un carácter aislado. Necesita:
-
-```text
-letra
-posición dentro de la palabra
-estado de sukūn y procedencia de esa información
-modo de lectura: waṣl | waqf | desconocido
-presencia de shaddah
-intervalo exacto del texto original
+    style Sughra fill:#cce5ff
+    style Kubra fill:#00BFFF
 ```
 
-Estados permitidos para el sukūn:
+> **Comentario de revisión e-tajweed:** se añade el modo de lectura. La posición final por sí sola no prueba que exista waqf; REL-001 tampoco cierra expresamente el caso final sākinah durante waṣl.
 
-- `explicit`: aparece mediante un signo reconocido en el corpus aprobado.
-- `corpus_verified`: está confirmado por los datos lingüísticos del corpus aprobado.
-- `waqf_induced`: se produce por una pausa efectivamente seleccionada.
-- `unknown`: no se puede demostrar con los datos disponibles.
+---
 
-## Árbol de decisión corregido
+## 📊 DIAGRAMA PRINCIPAL: ÁRBOL DE DECISIÓN
 
-```text
-1. ¿La letra pertenece a ق ط ب ج د?
-   no  → no hay qalqalah
-   sí  → continuar
+```mermaid
+flowchart TD
+    Start{"¿Detectaste una letra<br/>de قطب جد?"} -->|"SÍ"| CheckSakin{"¿Sukūn demostrado?"}
+    Start -->|"NO"| NoQalqalah["❌ لا قلقلة<br/>No es letra Qalqalah"]
 
-2. ¿Puede demostrarse que la letra está sākinah en el modo de lectura actual?
-   no       → no hay qalqalah
-   unknown  → requiere comprobación manual
-   sí       → continuar
+    CheckSakin -->|"NO - متحركة"| NoQalqalah2["❌ لا قلقلة<br/>Solo aplica con سكون"]
+    CheckSakin -->|"DESCONOCIDO"| Review["⚠️ Requiere comprobación"]
+    CheckSakin -->|"SÍ - ساكنة"| CheckPosition{"¿Posición de la letra?"}
 
-3. ¿Está dentro de la palabra?
-   sí → qalqalah ṣughrā, grado menor
+    CheckPosition -->|"Medio de palabra"| ApplySughra["✅ قلقلة صغرى<br/>Intensidad: SUAVE"]
+    CheckPosition -->|"Final de palabra"| CheckMode{"¿وقف o وصل?"}
 
-4. ¿Está al final y se realiza waqf?
-   sí + shaddah     → qalqalah kubrā, grado más fuerte
-   sí + sin shaddah → qalqalah kubrā, grado intermedio
+    CheckMode -->|"وصل"| Review2["⚠️ Pendiente de comprobación"]
+    CheckMode -->|"وقف + مشدد"| ApplyKubraStrong["✅ قلقلة كبرى<br/>Intensidad: MÁS FUERTE<br/>(حرف موقوف + مشدد)"]
+    CheckMode -->|"وقف + غير مشدد"| ApplyKubraMedium["✅ قلقلة كبرى<br/>Intensidad: FUERTE<br/>(حرف موقوف)"]
 
-5. ¿Está sākinah al final pero se realiza waṣl?
-   → pendiente de validación manual; REL-001 no describe este caso
-     con precisión suficiente para cerrarlo aquí.
+    style ApplySughra fill:#cce5ff
+    style ApplyKubraStrong fill:#00BFFF
+    style ApplyKubraMedium fill:#00BFFF
 ```
 
-El estado pendiente del punto 5 no implica que la regla religiosa sea desconocida. Significa únicamente que este documento no la afirmará sin verificarla en la referencia adoptada por el proyecto.
+> **Comentario de revisión e-tajweed:** el árbol ya no infiere sukūn por ausencia de vocal ni waqf por posición. También separa la semántica de la regla de su color de presentación.
 
-## Correcciones realizadas sobre la versión heredada
+---
 
-### Sukūn
+## 📊 TABLA DE CONDICIONES EXACTAS
 
-Se elimina la equivalencia:
+### REGLA 1: القلقلة الصغرى (Qalqalah Menor)
 
-```text
-ausencia de fatḥah/ḍammah/kasrah = sukūn
+| Condición | Valor |
+|-----------|-------|
+| **Entrada** | Una de las letras: ق ط ب ج د |
+| **Harakat** | ساكنة con sukūn demostrado; la ausencia de vocal visible produce estado desconocido |
+| **Posición** | وسط الكلمة (medio de palabra) |
+| **Contexto** | posición interna confirmada; no se deduce por “no final de āyah” |
+| **Presentación heredada** | #00BFFF (Azul Claro); no participa en la detección |
+| **Intensidad** | SUAVE / MENOR |
+| **Intersección** | No documentada de forma exhaustiva en REL-001 |
+| **Excepción** | No documentada de forma exhaustiva en REL-001 |
+| **Dependencia** | Verificar que letra esté ساكنة |
+
+> **Comentario de revisión e-tajweed:** se elimina “sin harakat vocal = sākinah”. Un texto incompletamente vocalizado también puede carecer de marca visible. El sukūn debe ser explícito o estar confirmado por el corpus adoptado. También se sustituyen las afirmaciones absolutas “ninguna intersección/excepción”, porque el resumen del libro no demuestra exhaustividad.
+
+**Ejemplos del libro (Página 62):**
+- أَطْعَمَهُ (ط ساكنة en medio)
+- أَفَتَطْمَعُونَ (ط ساكنة en medio)
+- يَجْعَلُونَ (ج ساكنة en medio)
+- يَبْكُونَ (ب ساكنة en medio)
+- يَدْخُلُونَ (د ساكنة en medio)
+
+**Algoritmo:**
+```
+SI (letra EN {ق، ط، ب، ج، د}) ENTONCES:
+    SI (sukun_demostrado) ENTONCES:
+        SI (posición == وسط_الكلمة) ENTONCES:
+            Aplicar: قلقلة صغرى
+            Nota: "Rebote suave"
+        FIN SI
+    SINO SI (estado_sukun == desconocido) ENTONCES:
+        Resultado: REQUIERE_COMPROBACIÓN
+    FIN SI
+FIN SI
 ```
 
-La falta de una vocal visible puede proceder de una vocalización incompleta o de la convención del corpus. En ese caso el resultado es `unknown`, no qalqalah automática.
+> **Comentario de revisión e-tajweed:** el color se retira del algoritmo porque pertenece a la presentación. También se añade un resultado explícito de incertidumbre para evitar inventar un sukūn.
 
-### Waqf
+---
 
-Waqf no se deduce sólo por estar al final de una palabra, al final de una āyah o junto a una marca. El modo efectivo de lectura se proporciona o se confirma durante la comprobación.
+### REGLA 2: القلقلة الكبرى (Qalqalah Mayor)
 
-### Unicode
+| Condición | Valor |
+|-----------|-------|
+| **Entrada** | Una de las letras: ق ط ب ج د |
+| **Harakat** | ساكنة (con sukūn ْ por وقف) |
+| **Posición** | آخر الكلمة (final de palabra) |
+| **Contexto** | وقف (pausa al final de aya o palabra) |
+| **Presentación heredada** | #00BFFF (Azul Claro); no participa en la detección |
+| **Intensidad** | FUERTE / MAYOR |
+| **Intersección** | Con تشديد (puede tener tashdīd) |
+| **Excepción** | No documentada de forma exhaustiva en REL-001 |
+| **Dependencia** | Verificar contexto de وقف |
 
-- No se tratará todo U+06D6–U+06ED como “marcas de pausa”; contiene signos con funciones diferentes.
-- U+FC00–U+FC18 no son marcadores Unicode estándar de fin de āyah.
-- La numeración de āyāt será metadato separado y comprobable.
-- Las marcas combinantes se analizarán como parte del grafema sin modificar ni reordenar el texto coránico.
+> **Comentario de revisión e-tajweed:** el waqf debe ser el modo efectivo de lectura, no una conclusión automática basada únicamente en la posición final, una marca próxima o el fin de āyah. El caso de una letra ya sākinah al final de palabra durante waṣl queda pendiente de comprobación manual porque REL-001 no lo describe con precisión suficiente.
 
-### Color
+**Ejemplos del libro (Página 62):**
+- الْفَلَقْ (ق en final con وقف)
+- لَهَبْ (ب en final con وقف)
+- أَحَدْ (د en final con وقف)
+- الصَّمَدْ (د en final con وقف)
 
-`#00BFFF` era una elección visual del análisis anterior, no una regla del libro. Puede conservarse como propuesta de interfaz, pero no participa en la detección ni demuestra el tipo o grado de qalqalah.
-
-### Frecuencias
-
-Se eliminan las frecuencias globales de las cinco letras. No medían ocurrencias de qalqalah y no estaban vinculadas a un corpus versionado.
-
-## Punto textual que debe comprobarse
-
-La página 62 conservada en REL-001 contiene esta formulación para el grado menor:
-
-```text
-مثل الوقف على القاف في (وخلقناكم)
+**Algoritmo:**
+```
+SI (letra EN {ق، ط، ب، ج، د}) ENTONCES:
+    SI (letra_tiene_sukun_por_waqf) ENTONCES:
+        SI (posición == آخر_الكلمة) ENTONCES:
+            SI (letra_tiene_tashdid) ENTONCES:
+                Aplicar: قلقلة كبرى
+                Intensidad: MÁS FUERTE
+                Nota: "Rebote fuerte + مشدد"
+            SINO:
+                Aplicar: قلقلة كبرى
+                Intensidad: FUERTE
+                Nota: "Rebote fuerte"
+            FIN SI
+        FIN SI
+    FIN SI
+FIN SI
 ```
 
-La expresión menciona waqf sobre una qāf situada dentro de `وخلقناكم`, lo que parece incoherente con la propia clasificación del párrafo. No se corrige de memoria ni se convierte en lógica. Debe compararse con la página física y con el muṣḥaf de referencia durante la validación manual.
+> **Comentario de revisión e-tajweed:** se retira el color del pseudocódigo. La regla devuelve significado religioso; la interfaz decide después cómo representarlo.
 
-## Casos para la validación manual del propietario
+---
 
-La persona responsable del proyecto comprobará visualmente y carácter por carácter estos casos contra un muṣḥaf coloreado, certificado y correspondiente a Warsh ʿan Nāfiʿ por ṭarīq al-Azraq:
+## 📊 TABLA DE GRADOS DE INTENSIDAD
 
-- Las cinco letras `ق ط ب ج د` con sukūn demostrado.
-- Las mismas letras con vocal efectiva, como casos negativos.
-- Los cinco ejemplos internos citados por el libro.
-- Los cuatro ejemplos finales citados por el libro, tanto en waṣl como en waqf cuando proceda.
-- Final con shaddah en waqf: `بالحقّ`.
-- Final sin shaddah en waqf: `محيط`.
-- Letra sākinah al final de palabra durante waṣl.
-- Texto cuya vocalización no permita demostrar el sukūn.
+| Grado | Condiciones | Intensidad | Ejemplo |
+|-------|-------------|------------|---------|
+| **1 - MÁS FUERTE** | حرف قلقلة + موقوف عليه + مشدد | ⭐⭐⭐ | بِالْحَقّْ (وقف على قاف مشددة) |
+| **2 - FUERTE** | حرف قلقلة + موقوف عليه + غير مشدد | ⭐⭐ | مُحِيطْ (وقف على طاء) |
+| **3 - SUAVE** | حرف قلقلة + وسط الكلمة | ⭐ | وَخَلَقْنَاكُمْ (قاف en medio) |
 
-Cada comprobación deberá registrar sura, āyah, palabra, modo de lectura, resultado observado y referencia exacta del muṣḥaf.
+**⚠️ NOTA IMPORTANTE:** La Qalqalah SOLO ocurre cuando la letra está ساكنة.
 
-## Estado de esta revisión
+> **Comentario de revisión e-tajweed:** REL-001 conserva en la página 62 la frase `مثل الوقف على القاف في (وخلقناكم)`, aunque la qāf está dentro de la palabra. Se mantiene el ejemplo interno, pero no se adopta la palabra `الوقف` como lógica hasta comprobarla durante la validación manual.
 
-La comparación y corrección de este documento contra REL-001 está cerrada. Puede pasarse al siguiente documento del orden establecido.
+---
 
-Durante la futura implementación de Qalqalah se deberá:
+## 🔗 MATRIZ DE INTERSECCIONES
 
-- comprobar manualmente los casos contra el muṣḥaf certificado;
-- mantener explícitas las dudas todavía abiertas;
-- demostrar que retirar las anotaciones reconstruye exactamente el texto original.
+| Letra Qalqalah | Con تشديد | Sin تشديد | Posición | Tipo |
+|----------------|-----------|-----------|----------|------|
+| ق ط ب ج د | ✅ Sí | - | Final + وقف | قلقلة كبرى (MÁS FUERTE) |
+| ق ط ب ج د | - | ✅ Sí | Final + وقف | قلقلة كبرى (FUERTE) |
+| ق ط ب ج د | - | ✅ Sí | Medio | قلقلة صغرى (SUAVE) |
+| ق ط ب ج د | متحركة | - | Cualquiera | ❌ لا قلقلة |
 
-La aprobación del especialista se mantiene como control final antes de declarar definitiva la aplicación, no como requisito para continuar ahora con el desarrollo controlado.
+---
+
+## 🎯 TABLA DE VERIFICACIÓN TÉCNICA
+
+### Para cada letra de قطب جد:
+
+```mermaid
+flowchart TD
+    Input["Letra detectada: ق/ط/ب/ج/د"]
+
+    Input --> Q1{"¿Tiene سكون<br/>demostrado?"}
+    Q1 -->|"NO"| Reject1["❌ لا قلقلة"]
+    Q1 -->|"DESCONOCIDO"| Review["⚠️ Requiere comprobación"]
+    Q1 -->|"SÍ"| Q2{"¿Posición?"}
+
+    Q2 -->|"وسط"| Apply1["✅ قلقلة صغرى"]
+    Q2 -->|"آخر + وقف"| Q3{"¿Tiene شدة?"}
+    Q2 -->|"آخر + وصل"| Review2["⚠️ Pendiente de comprobación"]
+
+    Q3 -->|"SÍ"| Apply2["✅ قلقلة كبرى<br/>⭐⭐⭐ MÁS FUERTE"]
+    Q3 -->|"NO"| Apply3["✅ قلقلة كبرى<br/>⭐⭐ FUERTE"]
+
+    style Apply1 fill:#cce5ff
+    style Apply2 fill:#00BFFF
+    style Apply3 fill:#00BFFF
+```
+
+> **Comentario de revisión e-tajweed:** el diagrama técnico incorpora incertidumbre y el caso final en waṣl. Los estilos del propio diagrama son ilustrativos y no forman parte de la salida del detector.
+
+---
+
+## 📝 NOTAS PARA IMPLEMENTACIÓN
+
+### Detección de سكون:
+1. **Sukūn explícito:** ْ (U+0652)
+2. **Sukūn confirmado:** Información lingüística procedente del corpus adoptado.
+3. **Sukūn por وقف:** Producido por una pausa efectivamente seleccionada.
+4. **Estado desconocido:** Ausencia de información suficiente; no se interpreta como sukūn.
+
+> **Comentario de revisión e-tajweed:** se elimina la regla heredada “letra sin fatḥah/ḍammah/kasrah = sukūn” porque confunde ausencia de marca con información fonética confirmada.
+
+### Detección de وقف:
+- El modo `waqf` o `waṣl` debe proporcionarse explícitamente al análisis.
+- Cada signo coránico se interpreta individualmente según su code point y función documentada.
+- El número y el final de āyah se almacenan como metadatos separados.
+- La posición final de palabra no demuestra por sí sola que el lector se detenga.
+
+> **Comentario de revisión e-tajweed:** se eliminan dos inferencias Unicode incorrectas. U+06D6–U+06ED no es un conjunto homogéneo de marcas de pausa y U+FC00–U+FC18 pertenece a Arabic Presentation Forms-A; no son marcadores Unicode estándar de fin de āyah.
+
+### Detección de تشديد:
+- Marca شدة: ّ (U+0651)
+- Combina con cualquier vocal
+
+### Colores:
+- **Ambos tipos:** #00BFFF (Azul Claro)
+- **Diferenciación:** Por metadata de intensidad
+- **Visualización:** Mismo color, diferente tooltip/nota
+
+> **Comentario de revisión e-tajweed:** esta sección se conserva como propuesta visual heredada. No procede del libro y no forma parte de la decisión religiosa. Cambiar el color nunca debe cambiar la detección.
+
+---
+
+## 🔍 EJEMPLOS DE ANÁLISIS
+
+### Ejemplo 1: وَخَلَقْنَاكُمْ
+- Letra: **ق** (U+0642)
+- Harakat: ْ (sukūn)
+- Posición: وسط الكلمة (entre خل y نا)
+- Tipo: **قلقلة صغرى**
+- Presentación heredada: #00BFFF
+- Intensidad: ⭐ SUAVE
+
+### Ejemplo 2: الْفَلَقْ
+- Letra: **ق** (U+0642)
+- Harakat: ْ (sukūn por وقف)
+- Posición: آخر الكلمة
+- Tipo: **قلقلة كبرى**
+- Presentación heredada: #00BFFF
+- Intensidad: ⭐⭐ FUERTE
+
+### Ejemplo 3: بِالْحَقّْ (con وقف)
+- Letra: **ق** (U+0642)
+- Harakat: ْ (sukūn) + ّ (شدة)
+- Posición: آخر الكلمة
+- Tipo: **قلقلة كبرى**
+- Presentación heredada: #00BFFF
+- Intensidad: ⭐⭐⭐ MÁS FUERTE
+
+> **Comentario de revisión e-tajweed:** los campos `Color` de estos ejemplos se renombran `Presentación heredada` para que no se confunda una elección de interfaz con el resultado religioso.
+
+---
+
+## ✅ CRITERIOS DE ÉXITO
+
+### Detector debe:
+1. ✅ Identificar las 5 letras de قطب جد
+2. ✅ Verificar que letra esté ساكنة
+3. ✅ Determinar posición (medio/final)
+4. ✅ Detectar contexto وقف vs وصل
+5. ✅ Identificar presencia de شدة
+6. ✅ Asignar tipo correcto (صغرى/كبرى)
+7. ✅ Registrar nivel de intensidad
+8. ✅ Devolver incertidumbre cuando no pueda demostrar sukūn o contexto
+9. ✅ Conservar el intervalo exacto del texto coránico sin modificarlo
+10. ✅ Registrar fuente, página y modo de lectura
+11. ✅ Permitir validación manual contra el muṣḥaf certificado durante el desarrollo
+
+> **Comentario de revisión e-tajweed:** aplicar un color no es criterio de éxito del detector. Se sustituyó por integridad textual, trazabilidad, incertidumbre y validación manual.
+
+---
+
+## 📖 REFERENCIAS
+
+- **Fuente:** Libro Parte 6 - Cualidades de las Letras (Páginas 56-64)
+- **Secciones:** القلقلة (definición y causa en p.61; clasificación y grados en p.62)
+- **Mnemónico:** قطب جد
+- **Color asignado:** #00BFFF (Azul Claro) según PALETA_COLORES_WARSH.md
+
+> **Comentario de revisión e-tajweed:** la referencia de páginas se corrige y el color queda identificado expresamente como procedente de la paleta heredada, no de REL-001.
+
+---
+
+**Fecha de creación:** 4 de diciembre de 2025
+**Propósito:** Guía de implementación para detector de Qalqalah
