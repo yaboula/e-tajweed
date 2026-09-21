@@ -118,6 +118,8 @@ Expresiones como “algoritmo completo”, “lista completa” o “verificaci�
 
 ## Salidas de la auditoría
 
+La decisión consolidada y el estado de cada artefacto se encuentran en [audit-summary.md](./audit-summary.md).
+
 Cada documento producirá, por separado:
 
 - Un informe de afirmaciones y fuentes.
