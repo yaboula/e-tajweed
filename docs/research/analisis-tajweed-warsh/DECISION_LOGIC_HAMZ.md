@@ -3,7 +3,7 @@
 
 > **Comentario de revisión e-tajweed (Partes 12-A, pp. 117–136, y 12-B, pp. 137–154):** Este archivo se copió íntegro del legado antes de corregirse. La aplicación detecta y anota reglas de Warsh ʿan Nāfiʿ por ṭarīq al-Azraq; **no** evalúa cómo pronuncia una persona. Hamzah, yāʾ y todo el rasm coránico permanecen idénticos: tashīl, ibdāl, naql, isqāṭ, waṣl y waqf son alternativas de **realización**, nunca instrucciones de modificar letras o marcas. Los ejemplos vocalizados del libro son ayudas pedagógicas, no texto alternativo para guardar ni golden text.
 >
-> **Comentario de revisión e-tajweed (límite de fuente):** La transcripción local de la Parte 12-B incluye correcciones y ejemplos dudosos en pp. 138 y 151. Se conservan sin editar como evidencia, pero sus recuentos y listas no pasan automáticamente a un catálogo normativo. Durante el desarrollo el usuario contrastará las ocurrencias con su muṣḥaf certificado de Warsh; el aval final de un qāriʾ o especialista y la validación **oral** de tashīl siguen pendientes.
+> **Comentario de revisión e-tajweed (fuente cotejada):** La transcripción local de las Partes 12-A/12-B contiene interpolaciones editoriales en pp. 134, 138 y 151. Se conserva intacta como evidencia histórica. El PDF escaneado de la sexta edición (Argelia, 2014) permitió cotejar esas páginas: `ءَأَلِدُ` pertenece al par de hamzāt de pp. 125–126, la nota de p. 138 trata `ءَأَلِهَتُنَا`, y la lista impresa de p. 151 sí declara seis palabras en doce lugares. Las referencias de āyah impresas se conservan como tales, sin equipararlas automáticamente a la numeración de otro muṣḥaf. Durante el desarrollo el usuario contrastará cada ocurrencia con su muṣḥaf certificado de Warsh; el aval final de un qāriʾ o especialista y la validación **oral** de tashīl siguen pendientes.
 
 ---
 
@@ -47,7 +47,7 @@ flowchart TD
     DoubleTypes --> OneWord["في كلمة واحدة:<br/>أَأَ / أَأُ / أَأِ"]
     DoubleTypes --> TwoWords["في كلمتين:<br/>متفقتان/مختلفتان"]
 
-    Triple --> TripleEx["Casos tratados en pp. 138–143:<br/>ءَأَلِدُ = conflicto de fuente<br/>ءَأَمِنتُم / ءَآلْـَٔانَ"]
+    Triple --> TripleEx["Casos tratados en pp. 138–143:<br/>ءَأَلِهَتُنَا / ءَأَمِنتُم / ءَآلْـَٔانَ"]
 
     style Single fill:#d4edda
     style Double fill:#cce5ff
@@ -200,7 +200,7 @@ flowchart TD
 | **ءَأَسْلَمْتُمْ** | آل عمران: 20 | إبدال / تسهيل | إبدال |
 | **ءَأَقْرَرْتُمْ** | آل عمران: 81 | إبدال / تسهيل | إبدال |
 | **ءَأَنتَ** | المائدة: 116, الأنبياء: 62 | إبدال / تسهيل | إبدال |
-| **ءَأَلِدُ** | هود: 72 | **requiere revisión de fuente:** pp. 125–126 la incluyen aquí con dos awjuh, pero la transcripción de p. 138 la vuelve a presentar como triple con tashīl único | No fijar |
+| **ءَأَلِدُ** | هود: 72 | إبدال / تسهيل de la segunda hamzah; caso de **dos** hamzāt confirmado por la página impresa 125 y por *الدليل الأوفق*, pp. 121–124 | إبدال en esta tabla; la duración del madd se registra con el perfil de lectura, no se deduce de la grafía |
 | **ءَأَرْبَابٌ** | يوسف: 39 | إبدال / تسهيل | إبدال |
 | **ءَأَسْجُدُ** | الإسراء: 61 | إبدال / تسهيل | إبدال |
 | **ءَأَشْكُرُ** | النمل: 40 | إبدال / تسهيل | إبدال |
@@ -315,7 +315,7 @@ flowchart TD
 
 ## 📊 TABLA 6: الهمز المزدوج في كلمتين - مختلفتان
 
-> **Comentario de revisión e-tajweed (pp. 133–136):** Las cinco combinaciones se aplican sólo a **ocurrencias en waṣl** y con vocales/identidad de hamzah verificadas. Los ejemplos y recuentos de la transcripción no prueban cobertura; hay incluso una corrección editorial incrustada junto a una cita de p. 134. Ante conflicto de cita se devuelve `requires_review`, no una coincidencia por string.
+> **Comentario de revisión e-tajweed (pp. 133–136):** Las cinco combinaciones se aplican sólo a **ocurrencias en waṣl** y con vocales/identidad de hamzah verificadas. Los ejemplos y recuentos de la transcripción no prueban cobertura. La interpolación editorial de p. 134 sobre `مَا يَشَاءُ أَلَمْ تَرَ` no aparece en el PDF: la página impresa cita `إبراهيم: 27/28` según su propia numeración. Se conserva esa referencia impresa como evidencia y se verifica la ocurrencia en el muṣḥaf del proyecto antes de fijar identificadores; no se hace coincidencia por string.
 
 ### 6.1 مفتوحة فمكسورة (14 ألفاظ, 19 موضع)
 
@@ -358,16 +358,16 @@ flowchart TD
 
 ## 📊 TABLA 7: ثلاث همزات - CASOS ESPECIALES
 
-> **Comentario de revisión e-tajweed (pp. 138–144):** La transcripción de p. 138 contiene una corrección editorial explícita sobre `ءَأَلِدُ` y una explicación que entra en tensión con la lista de pp. 125–126. Se conserva el material como evidencia, pero **no** se genera una salida normativa para Hūd 11:72 hasta contrastar la edición física y el muṣḥaf certificado. No tratar «tres palabras» como un detector completo.
+> **Comentario de revisión e-tajweed (pp. 138–144, cotejo del PDF):** La nota impresa de p. 138 dice que `ءَأَلِهَتُنَا` tiene el mismo tratamiento que `ءَأَمِنتُم`; la transcripción sustituyó erróneamente esa palabra por `ءَأَلِدُ`. Por tanto Hūd 11:72 **no** es miembro de esta tabla de tres hamzāt: se clasifica en la Tabla 4. Los ejemplos de esta sección son un índice de ocurrencias, no un detector por semejanza de cadenas.
 
-### 7.1 ءَأَلِدُ / ءَأَمِنتُم
+### 7.1 ءَأَلِهَتُنَا / ءَأَمِنتُم
 
 | Palabra | Origen | Suras | Regla |
 |---------|--------|-------|-------|
-| **ءَأَلِدُ** | La derivación de p. 138 contiene corrección editorial; no validada | هود: 72 | `requires_review` por contradicción con pp. 125–126; `أَهَالِدُ` es sólo aproximación pedagógica |
+| **ءَأَلِهَتُنَا** | Hamzah originaria sākinah sustituida por alif en la realización, antes de valorar las dos primeras | الزخرف: 58 | تحقيق primera + تسهيل segunda; p. 138 la equipara expresamente a `ءَأَمِنتُم` |
 | **ءَأَمِنتُم** | أَأْأَمِنتُم → ءَأَامِنتُم | الأعراف: 123, طه: 71, الشعراء: 49 | تحقيق أولى + تسهيل ثانية (أَهَامِنتُم) |
 
-**Nota:** Para `ءَأَمِنتُم` de al-Aʿrāf/Ṭā-Hā/al-Shuʿarāʾ, p. 138 explica una tercera hamzah originaria sustituida en la **realización** por alif antes de decidir sobre las dos primeras. Esto **no** autoriza a modificar el rasm ni a equiparar esas ocurrencias con al-Mulk 67:16 de la Tabla 4.
+**Nota:** Para `ءَأَمِنتُم` de al-Aʿrāf/Ṭā-Hā/al-Shuʿarāʾ y `ءَأَلِهَتُنَا` de al-Zukhruf, p. 138 explica una tercera hamzah originaria sustituida en la **realización** por alif antes de decidir sobre las dos primeras. Esto **no** autoriza a modificar el rasm ni a equiparar esas ocurrencias con al-Mulk 67:16 de la Tabla 4. Las grafías con hāʾ son aproximaciones pedagógicas, no texto de salida.
 
 ### 7.2 ءَآلْـَٔانَ - CASO ULTRA-COMPLEJO
 
@@ -454,7 +454,7 @@ flowchart TD
 
 ## 🔗 MATRIZ RESUMEN: الهمز المزدوج
 
-> **Comentario de revisión e-tajweed:** Esta matriz es un índice de los casos **generales**, no sustituye las excepciones anteriores ni resuelve el conflicto de `ءَأَلِدُ`. Hamzat al-waṣl, identidades de ocurrencia y conjuntos completos de awjuh se comprueban primero. Ninguna salida se fabrica únicamente a partir de dos marcas vocálicas visibles.
+> **Comentario de revisión e-tajweed:** Esta matriz es un índice de los casos **generales**, no sustituye las excepciones anteriores. El cotejo del PDF ya ubicó `ءَأَلِدُ` entre las dos hamzāt; hamzat al-waṣl, identidades de ocurrencia y conjuntos completos de awjuh se comprueban primero. Ninguna salida se fabrica únicamente a partir de dos marcas vocálicas visibles.
 
 ### في كلمة واحدة:
 
@@ -502,11 +502,11 @@ FUNCIÓN detectar_hamz_y_yaat(entrada):
         RETORNAR resolver_yaat(entrada)  # dominio separado, misma política de rasm
     SI entrada no contiene hamzah pertinente: RETORNAR not_applicable
 
-    # Las excepciones y conflictos de una ocurrencia vencen a patrones genéricos.
+    # Las excepciones y conflictos aún no cotejados vencen a patrones genéricos.
     SI entrada.cita_editorial_no_reconciliada:
         RETORNAR source_conflict("ejemplo o localización dudosos en la transcripción")
     SI entrada.es_hud_11_72_alid:
-        RETORNAR source_conflict("pp. 125–126 frente a p. 138")
+        RETORNAR resolver_par(entrada)  # dos hamzāt, pp. impresas 125–126; no triple
     SI entrada.es_alan_yunus_10_51_o_91:
         RETORNAR resolver_alan_por_situacion(entrada)
     SI entrada.es_istifham_mas_hamzat_wasl:
@@ -603,6 +603,10 @@ FUNCIÓN resolver_tres_hamzat_con_fuente(e):
         RETORNAR {primera=tahqiq, segunda=tashil,
                   tercera=ibdal_alif_en_realización,
                   badal_awjuh=referencia_correlacionada_de_p_138}
+    SI e.es_alihatuna_en_43_58:
+        RETORNAR {primera=tahqiq, segunda=tashil,
+                  tercera=ibdal_alif_en_realización,
+                  evidencia=p_138_impresa}
     RETORNAR requires_review("no extrapolar a al-Mulk ni a Hūd 11:72")
 FIN FUNCIÓN
 
@@ -631,8 +635,8 @@ FUNCIÓN resolver_yaat(e):
         exigir análisis morfológico, letra siguiente y ocurrencia de excepción
         SI e.es_mahyaya_6_162: RETORNAR {sukun + madd_6, adopted=true;
                                           fath, transmitted=true, adopted=false}
-        SI e.pertenece_a_lista_dudosa_de_p_151:
-            RETORNAR source_conflict("citas/editoriales no reconciliadas")
+        SI e.pertenece_a_lista_impresa_de_p_151 Y e.ocurrencia_del_corpus_no_cotejada:
+            RETORNAR requires_review("p. 151 verificada; falta mapear la numeración al corpus")
         RETORNAR awjuh_de_idafah_por_clase_modo_y_excepción_verificados
     SI e.es_zawaid:
         exigir identificador de una de las ocurrencias citadas y contraste con rasm
@@ -657,7 +661,8 @@ FIN FUNCIÓN
 - `جَاءَ آلَ`: tashīl con tres badal o ibdāl con qaṣr/madd; ninguna selección independiente (p. 130).
 - Los tres lugares especiales de dos kasrah: respectivamente 3, 4 y 3 awjuh identificados; dos salidas con grafía pedagógica parecida siguen siendo distintas (pp. 131–133).
 - `ءَآلْـَٔانَ` en Yūnus 10:51/91: elegir una de cinco matrices por contexto; no extrapolar los recuentos cuando intervenga ʿāriḍ (pp. 138–144).
-- `ءَأَلِدُ` (Hūd 11:72): devolver `source_conflict` y **ningún** wajh decidido hasta resolver pp. 125–126 frente a p. 138.
+- `ءَأَلِدُ` (Hūd 11:72): dos hamzāt abiertas, ibdāl/tashīl de la segunda; **no** heredar el tashīl único de `ءَأَمِنتُم`/`ءَأَلِهَتُنَا` de p. 138. El perfil de madd se coteja por separado (pp. 125–126; *الدليل الأوفق*, pp. 121–124).
+- `ءَأَلِهَتُنَا` (al-Zukhruf 43:58): incluirla con las tres hamzāt, nunca sustituirla por `ءَأَلِدُ` por el error de la transcripción (p. 138 impresa).
 - `وَمَحْيَايَ` (al-Anʿām 6:162): distinguir khilāf transmitido de la lectura aplicada con sukūn y madd 6 (p. 150).
 - `نُذُرِۦ` en al-Qamar: seis identificadores de ocurrencia, no seis lexemas; las yāʾāt no se insertan ni borran en el corpus (pp. 152–154).
 - En cada salida: retirar anotaciones debe reproducir exactamente los code points y el orden de grafemas de entrada.
@@ -696,9 +701,9 @@ FIN FUNCIÓN
 - 5 حالات según contexto (sin بدل, con بدل antes, con بدل después, وصل, وقف)
 - Hasta 27 combinaciones **en la matriz pedagógica citada** de una situación; p. 144 advierte que no incluye ʿāriḍ.
 
-### Conflicto de fuente que impide un resultado automático:
+### Cotejo de fuente que resolvió una falsa contradicción:
 
-- `ءَأَلِدُ` (Hūd 11:72): las pp. 125–126 dan dos awjuh en la lista de dos hamzāt; la p. 138, con corrección editorial incrustada, la trata como triple con tashīl único. Estado `source_conflict` hasta contrastar la página física y el muṣḥaf certificado.
+- `ءَأَلِدُ` (Hūd 11:72) figura en las dos hamzāt de pp. 125–126. La nota de p. 138 impresa se refiere a `ءَأَلِهَتُنَا` con `ءَأَمِنتُم`, no a Hūd. La contradicción era una sustitución en la transcripción; no se mantiene `source_conflict` para esta clasificación. La identificación del span y del madd en el corpus todavía se prueba durante la implementación.
 
 ---
 
@@ -708,7 +713,7 @@ FIN FUNCIÓN
 
 ### Conteo de casos الهمز المزدوج في كلمة واحدة:
 
-**مفتوحتان:** el libro cita 13 palabras y 21 lugares, sujeto a reconciliar el caso `ءَأَلِدُ`.
+**مفتوحتان:** el libro cita 13 palabras y 21 lugares; `ءَأَلِدُ` pertenece a esta clase según las páginas impresas 125–126. La cobertura exacta del corpus sigue pendiente de pruebas.
 **مفتوحة فمضمومة:** el libro cita 4 palabras.
 **مفتوحة فمكسورة:** el libro cita 9 palabras y 30 lugares.
 
@@ -790,16 +795,18 @@ FIN FUNCIÓN
 10. فَا تَزِلُونِۦ لِي (الدخان: 21)
 11. وَلِيَ دِينِ (الكافرون: 6)
 
-#### Seis lexemas declarados tras alif (fatḥ): inventario pendiente de cotejo
+#### Seis lexemas tras alif (fatḥ): doce lugares declarados en la página impresa
 
-> **Comentario de revisión e-tajweed (p. 151):** La transcripción dice «seis palabras en doce lugares», pero intercala un ejemplo de al-Najm 53:4 con varias **conjeturas editoriales** sobre su sustitución y otro ejemplo que ella misma declara ajeno a la condición de alif precedente. No se corrige el libro silenciosamente ni se aceptan esas doce posiciones como datos normativos. Los seis lemas impresos a continuación son candidatos; **cada lugar** debe cotejarse con la página física y el muṣḥaf certificado antes de activar la regla.
+> **Comentario de revisión e-tajweed (p. 151 impresa, cotejada con el PDF):** El libro sí declara **seis palabras en doce lugares**. La transcripción insertó al-Najm 53:4, Ṣād 38:23 y comentarios especulativos que **no aparecen** en la página escaneada; también omitió al-Naḥl 51 y comprimió la referencia impresa de al-Baqarah 39–40. Se conserva la transcripción heredada sin editarla, pero el inventario siguiente procede del PDF. Los números de āyah son **los impresos en esta edición**; no se convierten automáticamente a otra tradición de numeración. La coincidencia exacta de cada token y su span se comprobará contra el muṣḥaf certificado antes de activar el detector. *الدليل الأوفق*, p. 276, presenta «seis palabras en ocho lugares» dentro de una categoría de **acuerdo de todos los lectores**, de alcance distinto; no se restan ni se sustituyen recuentos entre ambas categorías.
 
-1. هُدَايَ (البقرة: 38، طه: 123)
-2. إِيَّايَ (البقرة: 40، الأعراف: 155، العنكبوت: 56)
+1. هُدَايَ (البقرة: 38، طه: 121 según la página impresa)
+2. إِيَّايَ (البقرة: 39–40 —dos lugares citados como intervalo—، الأعراف: 155، النحل: 51، العنكبوت: 56)
 3. بُشْرَايَ (يوسف: 19)
 4. مَثْوَايَ (يوسف: 23)
 5. رُؤْيَايَ (يوسف: 43، 100)
-6. عَصَايَ (طه: 18)
+6. عَصَايَ (طه: 17 según la página impresa)
+
+**Control del recuento impreso:** 2 + 5 + 1 + 1 + 2 + 1 = 12 lugares. La viñeta de al-Baqarah 39–40 sólo muestra una frase breve; antes de convertir el intervalo en dos identificadores de ocurrencia se verifica el muṣḥaf elegido. Las diferencias entre referencias impresas aquí y en otra edición no se etiquetan como erratas sin identificar primero su sistema de numeración.
 
 ---
 
@@ -879,4 +886,4 @@ FIN FUNCIÓN
 - ثلاث همزات y ءَآلْـَٔانَ: Páginas 137-144
 - ياءات الإضافة والزوائد: Páginas 145-154
 
-Fuentes locales conservadas sin cambios: `docs/libro/parte12-A.md` y `docs/libro/parte12-B.md`. La paleta válida de presentación asigna gris **sólo** al caso expresamente nombrado de hamzat al-waṣl interna no pronunciada en waṣl; no fija color para el conjunto de hamz ni para yāʾāt. El resultado de cualquier caso dudoso —en especial Hūd 11:72 y las citas problemáticas de p. 151— queda `source_conflict`/`requires_review` hasta contrastar edición física, corpus Warsh certificado y lectura experta; no se inventa una salida visual ni religiosa.
+Fuentes locales conservadas sin cambios: `docs/libro/parte12-A.md` y `docs/libro/parte12-B.md`. Cotejo visual realizado contra `D:\Descargas\مذكرة في أحكام التجويد برواية ورش عن نافع من طريق الأزرق.pdf`, sexta edición de 2014, SHA-256 `735FA3E6BE9DF40408A080D7CC7620EDEDD73B16B145AC761E53519322A56FF5`, pp. 125–126, 134, 138–144 y 150–151; contraste adicional con `D:\Descargas\warsh\DalilWarch.pdf`, primera edición de 2009, SHA-256 `2C9E8E09DD7167209657D7DD30A6BF1C8D46EDAF2063B9DB27E76AEABCD28DB3`, pp. 121–125, 136–140 y 273–278. La paleta válida de presentación asigna gris **sólo** al caso expresamente nombrado de hamzat al-waṣl interna no pronunciada en waṣl; no fija color para el conjunto de hamz ni para yāʾāt. La clasificación de Hūd 11:72 y la lista impresa de p. 151 ya no son conflictos de fuente; **siguen pendientes** el mapeo de ocurrencias al corpus certificado, el alcance completo de ʿāriḍ omitido en p. 144 y la validación oral/experta de tashīl. No se inventa una salida visual ni religiosa.

@@ -6,13 +6,13 @@
 - **Decisión:** rechazado como guía directa de implementación; conserva un inventario extenso, pero el algoritmo pierde excepciones, awjuh correlacionados y diferencias entre escritura y realización oral.
 - **Fuentes locales contrastadas:** REL-001 / `parte12-A.md` y `parte12-B.md`.
 
-> **Actualización tras la corrección del archivo migrado:** `rejected` describe el **original heredado** identificado por el SHA-256 superior, no la versión corregida de `DECISION_LOGIC_HAMZ.md`. Los hallazgos HAM-001–027 se atendieron allí: precedencia de excepciones, awjuh estructurados, perfiles correlacionados, Unicode reversible, rasm inmutable y estados de incertidumbre. Estado del documento corregido: `corrected` **con retención de fuente** para Hūd 11:72, los ejemplos editoriales de p. 151 y las matrices de `ءَآلْـَٔانَ` donde intervenga ʿāriḍ omitido por el libro. Estas entradas no son normativas hasta cotejo físico, muṣḥaf certificado y revisión experta; tashīl requiere además validación oral. La paleta ya es referencia válida del propietario; no se reabre como propuesta.
+> **Actualización tras cotejo físico de la fuente:** `rejected` describe el **original heredado** identificado por el SHA-256 superior, no la versión corregida de `DECISION_LOGIC_HAMZ.md`. El PDF escaneado de la sexta edición (2014), pp. 125–126, 134, 138–144 y 150–151, permitió corregir problemas creados por la transcripción: `ءَأَلِدُ` está entre las dos hamzāt y la nota de p. 138 se refiere a `ءَأَلِهَتُنَا`; p. 151 sí contiene seis lexemas y doce lugares, sin las conjeturas interpoladas en Markdown. Los hallazgos históricos HAM-001–027 se conservan como registro de lo detectado en el legado. Estado del documento corregido: `corrected`; permanecen `requires_review` para el mapeo de ocurrencias al muṣḥaf certificado y las combinaciones con ʿāriḍ omitidas en p. 144. Tashīl necesita validación oral y el aval final del especialista. La paleta ya es referencia válida del propietario; no se reabre como propuesta.
 
 ## Veredicto
 
 El documento contiene la mayor concentración de reglas, excepciones, ocurrencias y combinaciones del legado. Buena parte procede de las Partes 12-A y 12-B, pero su pseudocódigo reduce ese conocimiento a comparaciones de strings y retornos simples que no pueden representar el sistema.
 
-Hay ramas especiales inalcanzables, ausencia de salidas para casos no clasificados, pérdida de dependencias entre awjuh y representaciones pedagógicas de pronunciación tratadas como si fueran texto. La propia REL-001 contiene notas editoriales de corrección y ejemplos reconocidos como dudosos en la sección de yāʾāt; esas páginas no pueden aprobarse sin contraste con el libro físico.
+Hay ramas especiales inalcanzables, ausencia de salidas para casos no clasificados, pérdida de dependencias entre awjuh y representaciones pedagógicas de pronunciación tratadas como si fueran texto. La **transcripción local** de REL-001 contiene notas editoriales de corrección y ejemplos dudosos en yāʾāt; el PDF impreso cotejado demuestra que esas interpolaciones no pertenecen al libro. El inventario de ocurrencias aún requiere contraste con el corpus certificado.
 
 Tashīl es una realización oral que la fuente exige recibir de un shaykh autorizado. Ningún símbolo aproximado, sustitución por hāʾ ni algoritmo textual puede validarlo por sí mismo.
 
@@ -45,7 +45,7 @@ La fuente no reduce `ءَآلْـَٔانَ` a un único resultado: sus cinco si
 
 ### Yāʾāt al-iḍāfah y al-zawāʾid
 
-REL-001 12-B, líneas 153–345, presenta definiciones, categorías y listas. Este material sólo puede considerarse inventario provisional porque las líneas 254–269 contienen ejemplos problemáticos y comentarios editoriales de corrección que no son una transcripción limpia de una fuente identificada.
+La transcripción local de REL-001 12-B, líneas 153–345, presenta definiciones, categorías y listas. Sus líneas 254–269 no son fieles a la p. 151 impresa: incluyen conjeturas editoriales y omiten lugares. La lista de seis palabras y doce lugares se reconstruyó desde el PDF en el documento de decisión; sus identificadores en el corpus siguen pendientes.
 
 ## Hallazgos bloqueantes
 
@@ -205,7 +205,7 @@ El legado titula su lista “47 palabras”, pero incluye seis ocurrencias de `�
 
 La base deberá diferenciar lexema, token, ocurrencia y fenómeno.
 
-### HAM-024 — REL-001 Parte 12-B contiene contaminación editorial no resuelta
+### HAM-024 — La transcripción de REL-001 Parte 12-B contenía contaminación editorial
 
 Las líneas 254–269 de REL-001 declaran seis palabras en doce lugares, pero incluyen:
 
@@ -213,7 +213,7 @@ Las líneas 254–269 de REL-001 declaran seis palabras en doce lugares, pero in
 - Un ejemplo que la propia nota dice no cumplir la condición de alif precedente.
 - Un comentario de “corrección” añadido al texto.
 
-Esto no puede utilizarse como fuente normativa. Deben consultarse las páginas físicas, las obras citadas y un especialista. La copia se conserva intacta como evidencia del problema; no se corrige silenciosamente.
+**Estado posterior:** resuelto a nivel de fuente por cotejo de la p. 151 del PDF de la sexta edición. La página impresa declara seis palabras y doce lugares, sin esas notas; `DECISION_LOGIC_HAMZ.md` registra el inventario corregido. La transcripción heredada se conserva intacta como evidencia. Aún falta mapear cada lugar al muṣḥaf certificado y la revisión final del especialista.
 
 ### HAM-025 — La lista de once lugares contiene un khilāf no reducible a una fila
 
@@ -223,7 +223,7 @@ La futura entrada deberá distinguir opciones transmitidas, lectura adoptada, pr
 
 ### HAM-026 — Las listas manuales no prueban completitud
 
-Los encabezados “lista completa”, los conteos de palabras/lugares y las sumas de combinaciones pueden contener errores de transcripción o de unidad, como demuestra la propia Parte 12-B. Ningún conteo se aprobará sin reconciliar:
+Los encabezados “lista completa”, los conteos de palabras/lugares y las sumas de combinaciones pueden contener errores de transcripción o de unidad, como demuestra la comparación entre la transcripción de la Parte 12-B y su página impresa. Ningún conteo se aprobará sin reconciliar:
 
 - Página física.
 - Corpus versionado.

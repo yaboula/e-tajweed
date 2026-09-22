@@ -144,10 +144,10 @@ Documento corregido: [DECISION_LOGIC_MUDUD.md](./DECISION_LOGIC_MUDUD.md).
 
 ### `DECISION_LOGIC_HAMZ.md`
 
-- **Estado:** `corrected` con entradas `source_conflict`/`requires_review` explícitas.
+- **Estado:** `corrected` tras cotejo de los PDF originales; conserva `requires_review` donde falta validación de ocurrencia o de awjuh completos.
 - **Acción realizada:** migrado íntegro con el nombre original y corregido contra las Partes 12-A/12-B, pp. 117–154.
 - **Correcciones principales:** prioridad de casos especiales y hamzat al-waṣl, naql interno alcanzable, `كِتَابِيَهْ`/`مَالِيَهْ` vinculados, awjuh completos de dos kasrah y `جَاءَ آلَ`, cinco situaciones de `ءَآلْـَٔانَ` con límites, yāʾāt modeladas aparte, Unicode/rasm no destructivos y taḥqīq nunca por defecto.
-- **Retención de fuente:** `ءَأَلِدُ` en Hūd 11:72, ejemplos editoriales de p. 151 y ʿāriḍ omitido de las matrices de `ءَآلْـَٔانَ`; no se convierten en salidas normativas sin cotejo. Tashīl necesita validación oral experta.
+- **Cotejo posterior:** el PDF impreso ubica `ءَأَلِدُ` (Hūd 11:72) entre las dos hamzāt y equipara `ءَأَلِهَتُنَا` con `ءَأَمِنتُم` en p. 138; p. 151 declara seis lexemas en doce lugares, sin los ejemplos especulativos de la transcripción. Se conserva la numeración impresa y se mapeará al muṣḥaf certificado antes de activar cada ocurrencia. ʿĀriḍ omitido de las matrices de `ءَآلْـَٔانَ` y tashīl oral siguen pendientes de revisión experta.
 
 Informe: [hamz-audit.md](./hamz-audit.md).
 Documento corregido: [DECISION_LOGIC_HAMZ.md](./DECISION_LOGIC_HAMZ.md).
@@ -223,11 +223,11 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, un documento cada vez**. Los ocho documentos `DECISION_LOGIC_*` ya tienen una copia migrada y una revisión documental en el mismo archivo. Hamz conserva retenciones de fuente explícitas donde la transcripción no permite una decisión segura. La validación manual de resultados se realizará durante la implementación; la paleta sigue siendo referencia aceptada y no necesita ser reescrita para cerrar esta tanda.
+El trabajo continuará **verticalmente, un documento cada vez**. Los ocho documentos `DECISION_LOGIC_*` ya tienen una copia migrada y una revisión documental en el mismo archivo. El PDF original permitió resolver las falsas contradicciones de hamz en pp. 138 y 151; todavía se verifican las ocurrencias y las combinaciones omitidas con ʿāriḍ durante la implementación. La paleta sigue siendo referencia aceptada y no necesita ser reescrita para cerrar esta tanda.
 
 Orden recomendado:
 
-1. Mantener los ocho documentos corregidos, con las retenciones de fuente de hamz visibles y sin activar esas ocurrencias en el motor.
+1. Mantener los ocho documentos corregidos; activar cada ocurrencia de hamz sólo tras mapearla al muṣḥaf certificado y conservar `requires_review` en las combinaciones no cubiertas con ʿāriḍ.
 2. Antes de decidir otro documento, resolver qué entradas pendientes del análisis heredado conviene tratar a continuación; no modificar la paleta aceptada por analogía.
 3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
 
