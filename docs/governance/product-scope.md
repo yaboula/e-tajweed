@@ -38,6 +38,21 @@ Un ajuste visual será válido únicamente si:
 - se revisa sobre texto coránico real, con diacríticos, en temas y tamaños admitidos;
 - no altera el texto fuente ni la decisión semántica del motor.
 
+## Unidad exacta de coloración
+
+La coloración no se aplica necesariamente a una palabra, una letra completa ni un grafema completo. Según la regla y la notación del muṣḥaf de referencia, el objetivo visual puede ser:
+
+- únicamente la letra base;
+- únicamente una harakah o signo coránico concreto;
+- la letra base y una o varias de sus marcas;
+- varios componentes relacionados, cada uno con su propio intervalo de anotación.
+
+La presencia de una regla no autoriza a colorear automáticamente todos los code points del grafema. Cada resultado deberá identificar de forma explícita qué componentes reciben la anotación y cuáles conservan su presentación normal.
+
+El motor y la interfaz deberán distinguir entre letra base, harakāt, shaddah, sukūn, tanwīn y demás signos coránicos sin separarlos, eliminarlos ni reordenarlos en el texto fuente. La retirada de todas las anotaciones deberá reconstruir exactamente la entrada original.
+
+La selección exacta de los componentes coloreados para cada regla se fijará durante la verificación exhaustiva previa al motor mediante comparación con la paleta oficial, *الدليل الأوفق* y el muṣḥaf certificado.
+
 ## Fuentes con funciones distintas
 
 - El libro y los documentos `DECISION_LOGIC_*` definen las condiciones de detección.

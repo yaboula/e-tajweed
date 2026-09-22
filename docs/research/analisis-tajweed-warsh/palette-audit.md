@@ -223,6 +223,7 @@ Que un par supere contraste no valida el sistema completo ni permite usar color 
 La futura capa de presentación deberá:
 
 - Consumir anotaciones aprobadas; no detectar reglas.
+- Aplicar cada color al objetivo aprobado: letra base, marca concreta o ambas, sin extenderlo automáticamente al grafema completo.
 - Mostrar múltiples fenómenos sin eliminar ninguno.
 - No modificar, tachar, reordenar ni ocultar texto coránico.
 - Ofrecer etiqueta o símbolo además de color.
