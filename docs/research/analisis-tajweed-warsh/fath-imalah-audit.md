@@ -6,6 +6,8 @@
 - **Decisión:** rechazado como guía directa de implementación; conserva un inventario amplio de REL-001, pero su orden de evaluación contradice reglas y excepciones que el mismo documento registra.
 - **Fuente local contrastada:** REL-001 / `parte10.md`.
 
+> **Actualización tras la corrección del archivo migrado:** `rejected` describe el **original heredado** (SHA-256 indicado arriba), no la versión ahora corregida de `DECISION_LOGIC_FATH_IMALAH.md`. Los hallazgos FIM-001–022 se atendieron allí con comentarios de revisión, precedencia explícita, salidas de incertidumbre y rasm inmutable. Estado del documento corregido: `corrected` contra pp. 97–101; faltan la validación de ocurrencias durante la implementación, la decisión de presentación porque la paleta no asigna color propio a fatḥ/imālah y el aval final del especialista. Este informe se conserva como historial, no como nueva especificación.
+
 ## Veredicto
 
 El documento recoge muchas categorías, ejemplos y awjuh de la Parte 10. Su algoritmo, sin embargo, retorna una decisión por tipo de alif antes de consultar casos especiales y antes de resolver iltiqāʾ al-sākinayn. Como consecuencia, puede conceder imālah en waṣl donde la fuente la elimina fonéticamente y puede ocultar excepciones específicas.

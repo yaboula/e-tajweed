@@ -124,12 +124,13 @@ Documento corregido: [DECISION_LOGIC_IDGHAM.md](./DECISION_LOGIC_IDGHAM.md).
 
 ### `DECISION_LOGIC_FATH_IMALAH.md`
 
-- **Estado:** `rejected`.
-- **Puede recuperarse:** categorías, ocurrencias y matrices candidatas de la Parte 10.
-- **Debe crearse de nuevo:** morfología, ruʾūs al-āy, iʿrāb, waṣl/waqf y awjuh correlacionados.
-- **Razón principal:** evalúa casos especiales e iltiqāʾ al-sākinayn después de retornos definitivos.
+- **Estado:** `corrected`.
+- **Acción realizada:** migrado íntegro con el nombre original y corregido contra las páginas 97–101 de la Parte 10.
+- **Correcciones principales:** precedencia de excepciones (`ذِكْرَاهَا`, `الْجَارِ`, fawātiḥ), iltiqāʾ resuelto antes de la salida final y sólo sobre el alif suprimido fonéticamente, iʿrāb/morfología/ocurrencia verificados, badal correlacionado y estados de incertidumbre explícitos.
+- **Presentación:** la paleta aceptada no asigna color a fatḥ, taqlīl o imālah kubrā; queda una decisión de producto pendiente, sin crear ni remapear colores.
 
 Informe: [fath-imalah-audit.md](./fath-imalah-audit.md).
+Documento corregido: [DECISION_LOGIC_FATH_IMALAH.md](./DECISION_LOGIC_FATH_IMALAH.md).
 
 ### `DECISION_LOGIC_MUDUD.md`
 
@@ -220,12 +221,12 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah, nūn/tanwīn, mīm sākinah, tafkhīm/tarqīq e idghām están corregidos. La validación manual de sus resultados se realizará durante la implementación, por lo que la siguiente sesión puede continuar con fatḥ/imālah.
+El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah, nūn/tanwīn, mīm sākinah, tafkhīm/tarqīq, idghām y fatḥ/imālah están corregidos documentalmente. La validación manual de sus resultados se realizará durante la implementación; la siguiente sesión puede continuar con mudūd.
 
 Orden recomendado:
 
-1. Mantener Qalqalah, nūn/tanwīn, mīm sākinah, tafkhīm/tarqīq e idghām como documentos corregidos contra el libro.
-2. Revisar y corregir `DECISION_LOGIC_FATH_IMALAH.md` como próximo documento, sin abrir otros a la vez.
+1. Mantener los seis documentos ya corregidos contra el libro, incluido fatḥ/imālah.
+2. Revisar y corregir `DECISION_LOGIC_MUDUD.md` como próximo documento, sin abrir otros a la vez.
 3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
 
 La revisión del especialista se conserva como control final de la aplicación y no como bloqueo de la revisión documental ni del desarrollo.
