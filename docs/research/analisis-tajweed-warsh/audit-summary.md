@@ -144,12 +144,13 @@ Documento corregido: [DECISION_LOGIC_MUDUD.md](./DECISION_LOGIC_MUDUD.md).
 
 ### `DECISION_LOGIC_HAMZ.md`
 
-- **Estado:** `rejected`.
-- **Puede recuperarse:** catálogo de fenómenos, ocurrencias y combinaciones de las Partes 12-A/12-B, sujeto a verificación.
-- **Debe crearse de nuevo:** tashīl oral, morfología, Unicode, matrices completas, yāʾāt y perfiles correlacionados.
-- **Razón principal:** ramas inalcanzables, pérdida de awjuh, sustituciones textuales inseguras y fuente 12-B contaminada por correcciones no resueltas.
+- **Estado:** `corrected` con entradas `source_conflict`/`requires_review` explícitas.
+- **Acción realizada:** migrado íntegro con el nombre original y corregido contra las Partes 12-A/12-B, pp. 117–154.
+- **Correcciones principales:** prioridad de casos especiales y hamzat al-waṣl, naql interno alcanzable, `كِتَابِيَهْ`/`مَالِيَهْ` vinculados, awjuh completos de dos kasrah y `جَاءَ آلَ`, cinco situaciones de `ءَآلْـَٔانَ` con límites, yāʾāt modeladas aparte, Unicode/rasm no destructivos y taḥqīq nunca por defecto.
+- **Retención de fuente:** `ءَأَلِدُ` en Hūd 11:72, ejemplos editoriales de p. 151 y ʿāriḍ omitido de las matrices de `ءَآلْـَٔانَ`; no se convierten en salidas normativas sin cotejo. Tashīl necesita validación oral experta.
 
 Informe: [hamz-audit.md](./hamz-audit.md).
+Documento corregido: [DECISION_LOGIC_HAMZ.md](./DECISION_LOGIC_HAMZ.md).
 
 ### `PALETA_COLORES_WARSH.md`
 
@@ -222,12 +223,12 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, una sola regla cada vez**. Qalqalah, nūn/tanwīn, mīm sākinah, tafkhīm/tarqīq, idghām, fatḥ/imālah y mudūd están corregidos documentalmente. La validación manual de sus resultados se realizará durante la implementación; la siguiente sesión puede continuar con hamz.
+El trabajo continuará **verticalmente, un documento cada vez**. Los ocho documentos `DECISION_LOGIC_*` ya tienen una copia migrada y una revisión documental en el mismo archivo. Hamz conserva retenciones de fuente explícitas donde la transcripción no permite una decisión segura. La validación manual de resultados se realizará durante la implementación; la paleta sigue siendo referencia aceptada y no necesita ser reescrita para cerrar esta tanda.
 
 Orden recomendado:
 
-1. Mantener los siete documentos ya corregidos contra el libro, incluido mudūd.
-2. Revisar y corregir `DECISION_LOGIC_HAMZ.md` como próximo documento, sin abrir otros a la vez.
+1. Mantener los ocho documentos corregidos, con las retenciones de fuente de hamz visibles y sin activar esas ocurrencias en el motor.
+2. Antes de decidir otro documento, resolver qué entradas pendientes del análisis heredado conviene tratar a continuación; no modificar la paleta aceptada por analogía.
 3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
 
 La revisión del especialista se conserva como control final de la aplicación y no como bloqueo de la revisión documental ni del desarrollo.

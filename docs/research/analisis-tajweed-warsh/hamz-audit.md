@@ -6,6 +6,8 @@
 - **Decisión:** rechazado como guía directa de implementación; conserva un inventario extenso, pero el algoritmo pierde excepciones, awjuh correlacionados y diferencias entre escritura y realización oral.
 - **Fuentes locales contrastadas:** REL-001 / `parte12-A.md` y `parte12-B.md`.
 
+> **Actualización tras la corrección del archivo migrado:** `rejected` describe el **original heredado** identificado por el SHA-256 superior, no la versión corregida de `DECISION_LOGIC_HAMZ.md`. Los hallazgos HAM-001–027 se atendieron allí: precedencia de excepciones, awjuh estructurados, perfiles correlacionados, Unicode reversible, rasm inmutable y estados de incertidumbre. Estado del documento corregido: `corrected` **con retención de fuente** para Hūd 11:72, los ejemplos editoriales de p. 151 y las matrices de `ءَآلْـَٔانَ` donde intervenga ʿāriḍ omitido por el libro. Estas entradas no son normativas hasta cotejo físico, muṣḥaf certificado y revisión experta; tashīl requiere además validación oral. La paleta ya es referencia válida del propietario; no se reabre como propuesta.
+
 ## Veredicto
 
 El documento contiene la mayor concentración de reglas, excepciones, ocurrencias y combinaciones del legado. Buena parte procede de las Partes 12-A y 12-B, pero su pseudocódigo reduce ese conocimiento a comparaciones de strings y retornos simples que no pueden representar el sistema.
