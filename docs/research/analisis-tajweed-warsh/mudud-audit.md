@@ -6,6 +6,8 @@
 - **Decisión:** rechazado como guía directa de implementación; las categorías respaldadas por REL-001 requieren un modelo por ocurrencia de madd y por configuración de lectura.
 - **Fuente local contrastada:** REL-001 / `parte 11.md`.
 
+> **Actualización tras la corrección del archivo migrado:** `rejected` describe el **original heredado** identificado por el SHA-256 superior, no la versión ahora corregida de `DECISION_LOGIC_MUDUD.md`. Los hallazgos MUD-001–022 se atendieron en ese mismo archivo con comentarios de revisión, decisión por span, excepciones precedentes, awjuh correlacionados, incertidumbre explícita y rasm inmutable. Estado del documento corregido: `corrected` contra pp. 105–114. Permanecen para revisión la ambigüedad editorial de `سَوْءَاتٍ`, la duración no explicitada aquí para al-ʿAnkabūt, el mapeo visual de casos no cubiertos por la paleta, la verificación de ocurrencias durante la implementación y el aval final del especialista. Este informe es historial, no una especificación nueva.
+
 ## Veredicto
 
 El documento recoge una cantidad importante de la Parte 11: clases de madd, duraciones, excepciones y algunas matrices de compatibilidad. Sin embargo, su algoritmo pierde varios de esos mismos datos al resolverlos: borra excepciones de badal, elimina un wajh de ʿayn, no retorna correctamente madd al-layn y hace inalcanzables ramas de hamzat al-waṣl.
