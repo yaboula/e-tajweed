@@ -82,6 +82,17 @@ La incertidumbre explícita es un resultado válido. Inventar una respuesta o oc
 - **Uso:** contraste de texto, rasm ʿUthmānī, signos, fuentes y presentación del muṣḥaf de Warsh.
 - **Estado:** referencia institucional para corpus y presentación; la licencia y las condiciones de redistribución deberán verificarse antes de incorporar datos o fuentes.
 
+### PAL-001 — مصحف التجويد: paleta visual oficial
+
+- **Tipo:** imagen de referencia visual entregada y verificada por el propietario del proyecto el 2026-09-22.
+- **Custodia privada:** `resources/sources/private/PAL-001/mushaf-al-tajwid-official-palette.png`.
+- **Manifiesto:** `resources/sources/catalog/PAL-001.manifest.json`.
+- **SHA-256:** `df83d1e1b7196e0eb0f4cc898071b784528f7b2d57e48ab75d9129ff1667bd4d`.
+- **Uso:** fuente oficial del proyecto para las familias cromáticas y la agrupación visual de las reglas.
+- **Adaptación permitida:** ajustes ligeros, documentados y comprobados de contraste, luminosidad o saturación para asegurar claridad y accesibilidad, sin cambiar la identidad ni el significado de ninguna categoría.
+- **Restricción:** no determina las condiciones religiosas de detección. No se redistribuirá la imagen hasta documentar sus datos bibliográficos y derechos de publicación.
+- **Estado:** aceptada como referencia oficial del producto.
+
 ### Regla de validación religiosa
 
 Ninguna de estas referencias elimina la obligación de revisión humana. Para considerar terminada una regla deberá existir esta cadena:

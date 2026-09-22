@@ -155,9 +155,9 @@ Documento corregido: [DECISION_LOGIC_HAMZ.md](./DECISION_LOGIC_HAMZ.md).
 ### `PALETA_COLORES_WARSH.md`
 
 - **Estado:** `accepted_product_reference`.
-- **Se acepta como:** definición obligatoria de las nueve categorías visuales y sus colores.
+- **Se acepta como:** definición obligatoria de las nueve categorías visuales, sus familias cromáticas y su significado, respaldada por la imagen oficial `PAL-001` entregada por el propietario.
 - **No se usa como:** fuente religiosa para decidir si una regla está presente.
-- **Implementación:** puede añadir accesibilidad y metadatos sin cambiar el mapeo de la paleta.
+- **Implementación:** puede crear tonos derivados con ajustes ligeros de contraste, luminosidad o saturación, además de accesibilidad y metadatos, sin cambiar el mapeo semántico de la paleta.
 
 Informe: [palette-audit.md](./palette-audit.md).
 
@@ -223,12 +223,12 @@ Esto es intencional. La auditoría separó evidencia de legado y conocimiento ap
 
 ## Próxima fase recomendada
 
-El trabajo continuará **verticalmente, un documento cada vez**. Los ocho documentos `DECISION_LOGIC_*` ya tienen una copia migrada y una revisión documental en el mismo archivo. El PDF original permitió resolver las falsas contradicciones de hamz en pp. 138 y 151; todavía se verifican las ocurrencias y las combinaciones omitidas con ʿāriḍ durante la implementación. La paleta sigue siendo referencia aceptada y no necesita ser reescrita para cerrar esta tanda.
+El trabajo continuará **verticalmente, un documento cada vez**. Los ocho documentos `DECISION_LOGIC_*` ya tienen una copia migrada y una revisión documental en el mismo archivo. El PDF original permitió resolver las falsas contradicciones de hamz en pp. 138 y 151. Las ocurrencias y las combinaciones omitidas con ʿāriḍ deberán resolverse dentro de la verificación exhaustiva contra *الدليل الأوفق*, antes de crear el motor. La paleta sigue siendo referencia aceptada y no necesita ser reescrita para cerrar esta tanda.
 
 Orden recomendado:
 
 1. Mantener los ocho documentos corregidos; activar cada ocurrencia de hamz sólo tras mapearla al muṣḥaf certificado y conservar `requires_review` en las combinaciones no cubiertas con ʿāriḍ.
 2. Antes de decidir otro documento, resolver qué entradas pendientes del análisis heredado conviene tratar a continuación; no modificar la paleta aceptada por analogía.
-3. Al implementar cada regla, el propietario comprueba los resultados contra el muṣḥaf certificado.
+3. Tras superar la puerta documental previa, al implementar cada regla el propietario vuelve a comprobar los resultados del motor contra el muṣḥaf certificado. Esta comprobación operativa no sustituye la verificación exhaustiva anterior.
 
-La revisión del especialista se conserva como control final de la aplicación y no como bloqueo de la revisión documental ni del desarrollo.
+Antes de crear el motor se efectuará una verificación completa y exhaustiva de las reglas contra *الدليل الأوفق*. No se sustituirá esta puerta por verificaciones parciales. La revisión del especialista se conserva como control final de la aplicación.

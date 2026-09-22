@@ -703,7 +703,7 @@ FIN FUNCIÓN
 
 ### Cotejo de fuente que resolvió una falsa contradicción:
 
-- `ءَأَلِدُ` (Hūd 11:72) figura en las dos hamzāt de pp. 125–126. La nota de p. 138 impresa se refiere a `ءَأَلِهَتُنَا` con `ءَأَمِنتُم`, no a Hūd. La contradicción era una sustitución en la transcripción; no se mantiene `source_conflict` para esta clasificación. La identificación del span y del madd en el corpus todavía se prueba durante la implementación.
+- `ءَأَلِدُ` (Hūd 11:72) figura en las dos hamzāt de pp. 125–126. La nota de p. 138 impresa se refiere a `ءَأَلِهَتُنَا` con `ءَأَمِنتُم`, no a Hūd. La contradicción era una sustitución en la transcripción; no se mantiene `source_conflict` para esta clasificación. La identificación del span y del madd en el corpus deberá quedar fijada en la verificación exhaustiva previa al motor; durante la implementación sólo se probará que el motor respeta esa decisión.
 
 ---
 

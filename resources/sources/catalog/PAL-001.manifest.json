@@ -1,0 +1,19 @@
+{
+  "id": "PAL-001",
+  "title": "مصحف التجويد — official colour-wheel reference",
+  "classification": "official-project-visual-reference-provided-and-verified-by-owner",
+  "source_location": "image supplied directly by the project owner on 2026-09-22",
+  "custody_location": "resources/sources/private/PAL-001/mushaf-al-tajwid-official-palette.png",
+  "received_at": "2026-09-22",
+  "content_tracked_in_git": false,
+  "distribution_status": "private-reference; publication rights and bibliographic metadata not yet recorded",
+  "validation_status": "accepted by the project owner as the official palette reference",
+  "semantic_status": "colour families and their rule groupings are authoritative for the product; sampled or legacy HEX values are adaptable presentation tokens",
+  "adaptation_policy": "the application may make small documented colour and contrast adjustments for clarity and accessibility without changing rule identity, family or meaning",
+  "hash_algorithm": "SHA-256",
+  "sha256": "df83d1e1b7196e0eb0f4cc898071b784528f7b2d57e48ab75d9129ff1667bd4d",
+  "bytes": 616702,
+  "media_type": "image/png",
+  "width_px": 507,
+  "height_px": 741
+}

@@ -3,14 +3,18 @@
 - **Artefacto:** LEGACY-ANALYSIS-001 / `PALETA_COLORES_WARSH.md`
 - **SHA-256:** `ae3f00b1481c7bd53f2f6ce4fe32fa3972df8d25047323871d538cac892ff1c9`
 - **Estado:** `accepted_product_reference`
-- **Decisión vigente:** por decisión del propietario, define las nueve categorías visuales y sus colores. No define por sí sola las condiciones religiosas de detección.
-- **Fuente declarada:** “Diagrama circular Tajweed Warsh”, sin identificación verificable.
+- **Decisión vigente:** por decisión del propietario, define las nueve categorías visuales y sus familias de color. No define por sí sola las condiciones religiosas de detección.
+- **Referencia visual oficial:** `PAL-001`, imagen de *مصحف التجويد* entregada y verificada por el propietario el 2026-09-22.
+- **SHA-256 de PAL-001:** `df83d1e1b7196e0eb0f4cc898071b784528f7b2d57e48ab75d9129ff1667bd4d`.
+- **Custodia privada:** `resources/sources/private/PAL-001/mushaf-al-tajwid-official-palette.png`.
 
 ## Decisión posterior que prevalece
 
-El objetivo de e-tajweed es la detección exacta y la coloración de las nueve entradas de esta paleta. Por tanto, sus categorías y valores HEX son una referencia válida y obligatoria del producto.
+El objetivo de e-tajweed es la detección exacta y la coloración de las nueve entradas de esta paleta. Sus categorías, familias cromáticas y significado son una referencia válida y obligatoria del producto.
 
-Los hallazgos restantes de este informe se conservan únicamente como advertencias de implementación: accesibilidad, solapamientos, CSS y trazabilidad deberán resolverse sin rechazar ni cambiar el mapeo aprobado.
+Los HEX del documento heredado se conservan como tonos base. La aplicación puede emplear una paleta derivada con modificaciones ligeras de contraste, luminosidad o saturación para mejorar claridad y accesibilidad. Esas modificaciones no pueden cambiar la identidad, la familia cromática ni el significado de una categoría.
+
+Los hallazgos restantes de este informe se conservan únicamente como advertencias de implementación: accesibilidad, solapamientos, CSS y trazabilidad deberán resolverse sin rechazar ni cambiar el mapeo semántico aprobado.
 
 La paleta no reemplaza al libro ni a los documentos de decisión para detectar una regla. Detección y coloración permanecen separadas internamente, pero ambas son resultados obligatorios de la aplicación.
 
@@ -28,13 +32,13 @@ Estas intenciones complementan las nueve categorías y colores ya aceptados por 
 
 ## Hallazgos históricos de implementación
 
-> **Decisión vigente:** los hallazgos siguientes sirven para mejorar la implementación, la accesibilidad y la validación. No rechazan las nueve entradas ni sus valores HEX.
+> **Decisión vigente:** los hallazgos siguientes sirven para mejorar la implementación, la accesibilidad y la validación. No rechazan las nueve entradas ni sus familias oficiales. Los HEX heredados pueden ajustarse ligeramente conforme a la política de `docs/governance/product-scope.md`.
 
-### PAL-001 — La fuente visual no es identificable
+### PAL-HIST-001 — La fuente visual no estaba identificada durante la auditoría inicial
 
-Las líneas 255–260 citan un “Diagrama circular Tajweed Warsh” sin autor, título completo, edición, institución, URL, imagen bajo custodia, fecha de consulta ni licencia.
+Las líneas 255–260 citaban un “Diagrama circular Tajweed Warsh” sin autor, título completo, edición, institución, URL, imagen bajo custodia, fecha de consulta ni licencia.
 
-No puede comprobarse si la paleta fue copiada, adaptada o inventada, ni si se permite redistribuirla. Hasta resolver procedencia y derechos, no se reutilizará como activo.
+Este bloqueo de identidad quedó resuelto para el uso interno del producto cuando el propietario entregó y verificó la imagen oficial `PAL-001`. Siguen pendientes los datos bibliográficos y los derechos de redistribución; por ello la imagen se conserva en custodia privada y no se publicará automáticamente como activo de la aplicación.
 
 ### PAL-002 — El documento se declara compatible sin evidencia
 
@@ -250,7 +254,8 @@ La futura capa de presentación deberá:
 ## Decisión de migración vigente
 
 - Migrar `PALETA_COLORES_WARSH.md` con su nombre original cuando corresponda en el orden de trabajo.
-- Adoptar sus nueve categorías y valores HEX como referencia obligatoria del producto.
+- Adoptar sus nueve categorías, familias cromáticas y significado como referencia obligatoria del producto.
+- Conservar los HEX heredados como tonos base y permitir sólo ajustes ligeros, documentados y comprobados de contraste y claridad.
 - Tratar sus ejemplos CSS y prioridades como detalles de implementación que deberán probarse, no como permiso para cambiar la paleta.
 - No usar el color como evidencia para detectar una regla ni como único mecanismo para resolver solapamientos.
 - Aplicar la coloración mediante anotaciones que no alteren el texto coránico.
@@ -258,4 +263,4 @@ La futura capa de presentación deberá:
 
 ## Cierre del orden de auditoría
 
-Este informe queda como historial técnico. La decisión posterior del propietario fija como objetivo la detección exacta y la coloración de las nueve entradas de la paleta. La revisión del especialista será final y no bloquea el desarrollo.
+Este informe queda como historial técnico. La decisión posterior del propietario fija como objetivo la detección exacta y la coloración de las nueve entradas de la paleta oficial `PAL-001`. Antes de crear el motor habrá una verificación completa y exhaustiva contra *الدليل الأوفق*. La revisión del especialista se mantiene como control final.

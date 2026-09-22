@@ -8,7 +8,7 @@
 
 Este plan queda como registro histórico de la auditoría inicial. El trabajo activo continúa verticalmente, una sola regla cada vez: revisar, corregir, validar y sólo después elegir la siguiente.
 
-**Qalqalah**, **nūn/tanwīn**, **mīm sākinah**, **tafkhīm/tarqīq** e **idghām** han sido corregidos en sus documentos migrados. La validación manual contra el muṣḥaf se realizará durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
+**Qalqalah**, **nūn/tanwīn**, **mīm sākinah**, **tafkhīm/tarqīq** e **idghām** han sido corregidos en sus documentos migrados. Antes de crear el motor, todas las reglas pasarán conjuntamente por una verificación completa y exhaustiva contra *الدليل الأوفق*. Después, los resultados concretos del motor se validarán manualmente contra el muṣḥaf durante la implementación. El siguiente documento podrá revisarse en la próxima etapa, sin tratar varios a la vez.
 
 ## Regla principal
 
@@ -87,7 +87,7 @@ La implementación controlada puede comenzar en `development_ready`. Sólo `fina
 - `DECISION_LOGIC_FATH_IMALAH.md` — `corrected`; migrado intacto antes de editar y corregido contra las páginas 97–101: excepciones antes de reglas generales, iltiqāʾ antes del resultado final, clasificación verificada, awjuh correlacionados y rasm inmutable. Pendiente decidir presentación: la paleta no asigna color propio a fatḥ/imālah.
 - `DECISION_LOGIC_MUDUD.md` — `corrected`; migrado intacto antes de editar y corregido contra las páginas 105–114: decisiones por span, causas y excepciones conservadas, awjuh de ʿayn/layn/badal y matrices vinculadas, waṣl/waqf/ibtidāʾ, incertidumbre y rasm inmutable. Algunos casos visuales no tienen asignación expresa en la paleta.
 - `DECISION_LOGIC_HAMZ.md` — `corrected`; migrado intacto antes de editar y cotejado además con el PDF de la sexta edición y *الدليل الأوفق*: excepciones antes de patrones generales, pares y triples con awjuh correlacionados, naql/idghām/sakt en perfil, yāʾāt separadas y rasm inmutable. El falso conflicto de Hūd 11:72 y la lista alterada de p. 151 se corrigieron contra las páginas impresas; permanecen pendientes el mapeo al corpus certificado, ʿāriḍ omitido en p. 144 y la validación oral de tashīl.
-- `PALETA_COLORES_WARSH.md` — `accepted_product_reference`; define las nueve categorías y colores obligatorios. Las observaciones de accesibilidad o implementación se resolverán sin rechazar ni remapear la paleta.
+- `PALETA_COLORES_WARSH.md` — `accepted_product_reference`; junto con la imagen oficial `PAL-001`, define las nueve categorías, sus familias cromáticas y su significado. Los tonos de interfaz pueden recibir ajustes ligeros y documentados de contraste sin remapear la paleta.
 
 ## Hallazgos preliminares bloqueantes
 
